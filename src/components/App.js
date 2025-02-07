@@ -7,14 +7,15 @@ import Header from "./Header";
 
 function App() {
 
-  const [question, setQuestion] = useState([])
+  //State for dilemmas
+  const [dilemmas, setDilemmas] = useState([])
 
-  useEffect(retrieveQuestion, [])
+  useEffect(retrieveDilemmas, [])
 
-  function retrieveQuestion(){
+  function retrieveDilemmas(){
     fetch("http://localhost:4000/questions")
     .then(response => response.json())
-    .then(setQuestion)
+    .then(setDilemmas)
   }
 
   return (
@@ -23,7 +24,7 @@ function App() {
       <Header />
       <Outlet context={
         {
-          question: question
+          dilemmas: dilemmas
         }
       }/>
       
