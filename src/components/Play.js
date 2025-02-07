@@ -1,8 +1,8 @@
 // import { useOutletContext } from "react-router-dom";
 
-function Play({question}){
+function Play({dilemmas}){
     return(
-        <h1>question:{question}</h1>
+        <h1>Dilemma:{dilemmas}</h1>
     )
 }
 

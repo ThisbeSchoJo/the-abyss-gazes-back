@@ -10,6 +10,10 @@ function App() {
   //State for dilemmas
   const [dilemmas, setDilemmas] = useState([])
 
+  //State for tracking user morality scores
+  const [scores, setScores] = useState({utilitarian: 0, deontology: 0})
+
+
   useEffect(retrieveDilemmas, [])
 
   function retrieveDilemmas(){
@@ -24,7 +28,8 @@ function App() {
       <Header />
       <Outlet context={
         {
-          dilemmas: dilemmas
+          dilemmas: dilemmas,
+          scores: scores
         }
       }/>
       
