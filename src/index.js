@@ -8,7 +8,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import routes from "./routes"
 
 const router = createBrowserRouter(routes)
-console.log(routes)
+// console.log(routes)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<RouterProvider router={router}/>);

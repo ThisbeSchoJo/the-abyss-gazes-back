@@ -6,13 +6,10 @@ import NavBar from "./NavBar";
 import Header from "./Header";
 
 function App() {
-
   //State for dilemmas
   const [dilemmas, setDilemmas] = useState([])
-
   //State for tracking user morality scores
   const [scores, setScores] = useState({utilitarian: 0, deontology: 0})
-
   //State to track the current question index
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   
@@ -52,7 +49,8 @@ function App() {
         {
           dilemmas: dilemmas,
           scores: scores,
-          currentQuestionIndex: currentQuestionIndex
+          currentQuestionIndex: currentQuestionIndex,
+          handleChoice : handleChoice
         }
       }/>
       
