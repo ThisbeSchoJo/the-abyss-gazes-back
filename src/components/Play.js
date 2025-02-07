@@ -1,7 +1,10 @@
-function Play(){
+// import { useOutletContext } from "react-router-dom";
+
+function Play({question}){
     return(
-        <h1>Will add game here</h1>
+        <h1>question:{question}</h1>
     )
 }
 
 export default Play;
+
