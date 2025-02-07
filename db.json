@@ -1,1 +1,46 @@
-{}
+{
+    "questions": [
+      {
+        "id": "1",
+        "question": "A runaway trolley is headed toward five people tied to the tracks. You can pull a lever to divert it to another track where it will only hit one person. Do you pull the lever?",
+        "background": "/images/trolley.jpg",
+        "choices": [
+          "Pull the lever - Save five, sacrifice one.",
+          "Do nothing - Let fate decide."
+        ],
+        "categoryEffects": {
+          "utilitarian": 10,
+          "deontology": -10
+        }
+      },
+      {
+        "id": "2",
+        "question": "You're a doctor with five dying patients who each need a different organ transplant. A healthy traveler comes in for a check-up, and you could secretly take their organs to save the five patients. Do you do it?",
+        "background": "/images/hospital.jpg",
+        "choices": [
+          "Harvest the organs - Save five, kill one.",
+          "Let nature take its course - The traveler lives."
+        ],
+        "categoryEffects": {
+          "utilitarian": 10,
+          "deontology": -15
+        }
+      }
+    ],
+  
+    "userScores": [
+      {
+        "userId": "1",
+        "name": "Thisbe",
+        "utilitarian": 0,
+        "deontology": 0
+      },
+      {
+        "userId": "2",
+        "name": "Sydney",
+        "utilitarian": 5,
+        "deontology": -3
+      }
+    ]
+  }
+  
