@@ -35,10 +35,10 @@ function App() {
         deontology: prevScores.deontology + (categoryEffects.deontology),
       }
 
-      //Log the final scores when the last question is answered
-      if (currentQuestionIndex === dilemmas.length -1) {
-        console.log(`Game Over - Final Scores:${newScores}`)
-      }
+      //Log the final scores if at end or move to next dilemma
+      currentQuestionIndex === dilemmas.length -1 
+      ? console.log(`Game Over - Final Scores:${newScores}`)
+      : setCurrentQuestionIndex((prevIndex) => prevIndex + 1)
 
       return newScores
     })
