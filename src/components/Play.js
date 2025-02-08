@@ -1,21 +1,23 @@
 import { useOutletContext } from "react-router-dom";
 
 function Play(){
-    const { dilemmas } = useOutletContext()
+    const { dilemmas, currentQuestionIndex } = useOutletContext()
 
-    const dilemmaComponents = dilemmas.map(dilemma => {
-        return(
-            <div key={dilemma.id}>
-                <h1>{dilemma.question}</h1>
-                <h2>{dilemma.choices}</h2>
-                <h3>{dilemma.categoryEffects.utilitarian}</h3>
-                <h3>{dilemma.categoryEffects.deontology}</h3>
-            </div>
-        )
-    })
+    const currentDilemma = dilemmas[currentQuestionIndex]
+
+    if (currentDilemma !== undefined) {
+        console.log(currentDilemma.question)
+    } 
+    else {
+        return null
+    }
+    
     return (
-        <div>
-            {dilemmaComponents}
+        <div key={currentDilemma.id}>
+            <h1>{currentDilemma.question}</h1>
+            <h2>{currentDilemma.choices}</h2>
+            {/* <h3>{currentDilemma.categoryEffects.utilitarian}</h3>
+            <h3>{currentDilemma.categoryEffects.deontology}</h3> */}
         </div>
     )
 }
