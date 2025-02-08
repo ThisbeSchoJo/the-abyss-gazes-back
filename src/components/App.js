@@ -29,17 +29,22 @@ function App() {
     setScores((prevScores) => {
       const newScores = {
         utilitarian: prevScores.utilitarian + (categoryEffects.utilitarian),
-        deontology: prevScores.deontology + (categoryEffects.deontology),
+        deontology: prevScores.deontology + (categoryEffects.deontology)
       }
-
-      //Log the final scores if at end or move to next dilemma
-      currentQuestionIndex === dilemmas.length -1 
-      ? console.log(`Game Over - Final Scores:${newScores}`)
-      : setCurrentQuestionIndex((prevIndex) => prevIndex + 1)
-
       return newScores
     })
+
+    //Log the final scores if at end or move to next dilemma
+    setTimeout(() => {
+      if (currentQuestionIndex === (dilemmas.length - 1)) {
+        console.log(`Game Over - Final Scores:${scores}`)
+      } 
+    }, [currentQuestionIndex, dilemmas.length, scores])
+        // setCurrentQuestionIndex((prevIndex) => prevIndex + 1)
+      // }
+    // })
   }
+  
 
   return (
     <div className="app">
