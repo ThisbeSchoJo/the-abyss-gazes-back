@@ -146,6 +146,18 @@
       "careEthics": 1,
       "socialContractTheory": -2,
       "feministEthics": 0
+    },
+    {
+      "id": "c209",
+      "userName": "",
+      "scores": {
+        "utilitarian": 3,
+        "deontology": -15,
+        "virtueEthics": null,
+        "careEthics": null,
+        "feministEthics": null,
+        "socialContractTheory": null
+      }
     }
   ]
 }
