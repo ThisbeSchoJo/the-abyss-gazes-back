@@ -39,6 +39,7 @@ if (!scores) {
     return <p>Please complete the moral dilemma questions to receive results</p>
 }
 
+
 return(
     <div className="results">
         <h1>Your Results</h1>

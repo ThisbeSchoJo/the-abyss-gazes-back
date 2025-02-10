@@ -278,6 +278,18 @@
         "socialContractTheory": -5,
         "feministEthics": -10
       }
+    },
+    {
+      "id": "2151",
+      "userName": "hkh",
+      "scores": {
+        "utilitarian": -5,
+        "deontology": 0,
+        "virtueEthics": 10,
+        "careEthics": 10,
+        "socialContractTheory": -5,
+        "feministEthics": -10
+      }
     }
   ]
 }
