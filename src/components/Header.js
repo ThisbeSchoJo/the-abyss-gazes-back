@@ -1,7 +1,9 @@
 
 function Header() {
     return(
-        <h1>the abyss gazes back</h1>
+        <header>
+            <h1>the abyss gazes back</h1>
+        </header>
     )
 }
 

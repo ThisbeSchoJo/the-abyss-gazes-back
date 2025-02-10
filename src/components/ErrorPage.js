@@ -1,6 +1,13 @@
+import NavBar from "./NavBar";
+import Header from "./Header";
+
 function ErrorPage(){
     return(
-        <h1>Will add an error message here</h1>
+        <div className="app">
+            <NavBar />
+            <Header />
+            <h4>You have wandered into the abyss.... Please return home.</h4>
+        </div>
     )
 }
 

@@ -1,6 +1,6 @@
 function AddDilemma(){
     return (
-        <form>
+        <form className="app">
             <label >Question: </label>
             <input type="text" name= "question" />
             <br/><br/>

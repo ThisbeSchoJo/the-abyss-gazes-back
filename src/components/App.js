@@ -92,7 +92,7 @@ function App() {
   }, [scores, currentQuestionIndex, dilemmas.length, userName])  
 
   return (
-    <div className="app">
+    <div>
       <NavBar />
       <Header />
       <Outlet context={
