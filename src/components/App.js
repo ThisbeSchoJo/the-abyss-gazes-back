@@ -58,7 +58,7 @@ function App() {
         // environmental: prevScores.environmental + (categoryEffects.environmental),
         // confucian: prevScores.confucian + (categoryEffects.confucian),
         feministEthics: prevScores.feministEthics + (categoryEffects.feministEthics),
-        socialContractTheory: prevScores.socialContractTheory + (categoryEffects.socialContractTheory),
+        socialContractTheory: prevScores.socialContractTheory + (categoryEffects.socialContractTheory)
         // spiritual: prevScores.spiritual + (categoryEffects.spiritual),
       }
       return newScores

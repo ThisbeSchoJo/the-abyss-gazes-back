@@ -21,13 +21,12 @@ function Results() {
 if (!isNameSubmitted) {
     return (
         <div>
-            <h1>Enter your name</h1>
             <form onSubmit={handleNameSubmit}>
                 <input
                 type="text"
                 value={userName}
                 onChange={(e) => setUserName(e.target.value)}
-                placeholder="Enter your name:"
+                placeholder="Enter your name"
                 />
                 <button type="submit">Submit</button>
             </form>
@@ -39,7 +38,6 @@ if (!isNameSubmitted) {
 if (!scores) {
     return <p>Please complete the moral dilemma questions to receive results</p>
 }
-
 
 return(
     <div className="results">

@@ -146,54 +146,6 @@
       "careEthics": 1,
       "socialContractTheory": -2,
       "feministEthics": 0
-    },
-    {
-      "id": "dcf4",
-      "userName": "",
-      "scores": {
-        "utilitarian": 15,
-        "deontology": -15,
-        "virtueEthics": null,
-        "careEthics": null,
-        "feministEthics": null,
-        "socialContractTheory": null
-      }
-    },
-    {
-      "id": "a4eb",
-      "userName": "",
-      "scores": {
-        "utilitarian": -15,
-        "deontology": -5,
-        "virtueEthics": null,
-        "careEthics": null,
-        "feministEthics": null,
-        "socialContractTheory": null
-      }
-    },
-    {
-      "id": "d1dc",
-      "userName": "",
-      "scores": {
-        "utilitarian": 18,
-        "deontology": 0,
-        "virtueEthics": null,
-        "careEthics": null,
-        "feministEthics": null,
-        "socialContractTheory": null
-      }
-    },
-    {
-      "id": "f3b1",
-      "userName": "Thisbe",
-      "scores": {
-        "utilitarian": 5,
-        "deontology": -20,
-        "virtueEthics": null,
-        "careEthics": null,
-        "feministEthics": null,
-        "socialContractTheory": null
-      }
     }
   ]
 }
