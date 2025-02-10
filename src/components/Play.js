@@ -17,10 +17,16 @@ function Play(){
         //Get the category effects based on the selected choice
         const categoryEffects = choice.categoryEffects
         console.log(`Selected choice:${choice.text}`)
-        console.log(`Category effects:${categoryEffects}`)
-        // handleChoice(categoryEffects) //call the callback to handle the answer
+        console.log(`Category effects:${categoryEffects.utilitarian}`)
+        handleChoice(categoryEffects) //call the callback to handle the answer
     }
     
+            // "deontology": -10,
+            // "virtueEthics": 5,
+            // "careEthics": -5
+
+
+
     return (
         <div key={currentDilemma.id}>
             <h1>{currentDilemma.question}</h1>

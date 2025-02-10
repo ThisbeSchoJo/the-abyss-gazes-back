@@ -19,6 +19,9 @@ function App() {
   })
   //State to track the current question index
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
+
+  //State to store user's name
+  const [userName, setUserName] = useState("")
   
   useEffect(() => {
     retrieveDilemmas()
@@ -68,9 +71,25 @@ function App() {
     //Log the final scores if at end or move to next dilemma
   useEffect(() => {
     if (currentQuestionIndex === (dilemmas.length - 1)) {
+      const resultData = {
+        userName: userName,
+        scores: scores
+      }
+      
+      fetch("http://localhost:4000/userScores", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(resultData)
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log(`User scores saved:${data}`)
+      })
       console.log(`Game Over - Final Scores:${scores}`)
     }
-  }, [scores, currentQuestionIndex, dilemmas.length])  
+  }, [scores, currentQuestionIndex, dilemmas.length, userName])  
 
   return (
     <div className="app">
@@ -81,7 +100,8 @@ function App() {
           dilemmas: dilemmas,
           scores: scores,
           currentQuestionIndex: currentQuestionIndex,
-          handleChoice : handleChoice
+          handleChoice : handleChoice,
+          setUserName: setUserName
         }
       }/>
       

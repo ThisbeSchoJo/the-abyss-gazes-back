@@ -126,27 +126,38 @@
       ]
     }
   ],
-    "userScores": [
-      {
-        "userId": "1",
-        "name": "Thisbe",
-        "utilitarian": 0,
-        "deontology": 0,
-        "virtueEthics": 0,
-        "careEthics": 0,
-        "socialContractTheory": 0,
-        "feministEthics": 0
-      },
-      {
-        "userId": "2",
-        "name": "Sydney",
-        "utilitarian": 5,
-        "deontology": -3,
-        "virtueEthics": 2,
-        "careEthics": 1,
-        "socialContractTheory": -2,
-        "feministEthics": 0
+  "userScores": [
+    {
+      "userId": "1",
+      "name": "Thisbe",
+      "utilitarian": 0,
+      "deontology": 0,
+      "virtueEthics": 0,
+      "careEthics": 0,
+      "socialContractTheory": 0,
+      "feministEthics": 0
+    },
+    {
+      "userId": "2",
+      "name": "Sydney",
+      "utilitarian": 5,
+      "deontology": -3,
+      "virtueEthics": 2,
+      "careEthics": 1,
+      "socialContractTheory": -2,
+      "feministEthics": 0
+    },
+    {
+      "id": "dcf4",
+      "userName": "",
+      "scores": {
+        "utilitarian": 15,
+        "deontology": -15,
+        "virtueEthics": null,
+        "careEthics": null,
+        "feministEthics": null,
+        "socialContractTheory": null
       }
-    ]
+    }
+  ]
 }
-  
