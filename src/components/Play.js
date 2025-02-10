@@ -29,6 +29,11 @@ function Play(){
 
     return (
         <div key={currentDilemma.id}>
+            <img 
+            src={currentDilemma.background}
+            alt="Dilemma Background"
+            className="background-image"
+            />
             <h1>{currentDilemma.question}</h1>
             <div>
                 <button onClick={() => handleChoiceSelection(currentDilemma.choices[0])}>{currentDilemma.choices[0].text}</button>
