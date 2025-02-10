@@ -1,289 +1,152 @@
 {
-    "questions": [
-      {
-        "id": "1",
-        "question": "A runaway trolley is headed toward five people tied to the tracks. You can pull a lever to divert it to another track where it will only hit one person. Do you pull the lever?",
-        "background": "/images/trolley.jpg",
-        "choices": [
-          "Pull the lever - Save five, sacrifice one.",
-          "Do nothing - Let fate decide."
-        ],
-        "categoryEffects": {
-          "utilitarian": 10,
-          "deontology": -10,
-          "virtueEthics": 5, 
-          "careEthics": -5
+  "questions": [
+    {
+      "id": "1",
+      "question": "A runaway trolley is headed toward five people tied to the tracks. You can pull a lever to divert it to another track where it will only hit one person. Do you pull the lever?",
+      "background": "/images/trolley.jpg",
+      "choices": [
+        {
+          "text": "Pull the lever - Save five, sacrifice one.",
+          "categoryEffects": {
+            "utilitarian": 10,
+            "deontology": -10,
+            "virtueEthics": 5,
+            "careEthics": -5
+          }
+        },
+        {
+          "text": "Do nothing - Let fate decide.",
+          "categoryEffects": {
+            "utilitarian": -10,
+            "deontology": 5,
+            "virtueEthics": 0,
+            "careEthics": 0
+          }
         }
-      },
-      {
-        "id": "2",
-        "question": "You're a doctor with five dying patients who each need a different organ transplant. A healthy traveler comes in for a check-up, and you could secretly take their organs to save the five patients. Do you do it?",
-        "background": "/images/hospital.jpg",
-        "choices": [
-          "Harvest the organs - Save five, kill one.",
-          "Let nature take its course - The traveler lives."
-        ],
-        "categoryEffects": {
-          "utilitarian": 10,
-          "deontology": -15,
-          "socialContractTheory": -5,
-          "feministEthics": -10
+      ]
+    },
+    {
+      "id": "2",
+      "question": "You're a doctor with five dying patients who each need a different organ transplant. A healthy traveler comes in for a check-up, and you could secretly take their organs to save the five patients. Do you do it?",
+      "background": "/images/hospital.jpg",
+      "choices": [
+        {
+          "text": "Harvest the organs - Save five, kill one.",
+          "categoryEffects": {
+            "utilitarian": 10,
+            "deontology": -15,
+            "socialContractTheory": -5,
+            "feministEthics": -10
+          }
+        },
+        {
+          "text": "Let nature take its course - The traveler lives.",
+          "categoryEffects": {
+            "utilitarian": -5,
+            "deontology": 10,
+            "socialContractTheory": 5,
+            "feministEthics": 5
+          }
         }
-      },
-      {
-        "id": "3",
-        "question": "Your parent is guilty of a serious crime that could put them in prison for life. You discover this by accident. If you report it, your entire family will fall apart. Do you expose them or protect your family?",
-        "background": "/images/family.jpg",
-        "choices": [
-          "Report the crime - Seek justice, even if it destroys your family.",
-          "Stay silent - Protect your family, but let the criminal go free."
-        ],
-        "categoryEffects": {
-          "virtueEthics": -5,
-          "egoism": 10,
-          "careEthics": 15,
-          "deontology": -5
+      ]
+    },
+    {
+      "id": "3",
+      "question": "You discover a criminal is planning an attack that could kill hundreds of innocent people. The authorities are hesitant to take action. Do you intervene, risking your safety?",
+      "background": "/images/criminal.jpg",
+      "choices": [
+        {
+          "text": "Intervene - Prevent the attack at any cost.",
+          "categoryEffects": {
+            "utilitarian": 8,
+            "deontology": -5,
+            "virtueEthics": 10,
+            "careEthics": 5
+          }
+        },
+        {
+          "text": "Do nothing - Let the authorities handle it.",
+          "categoryEffects": {
+            "utilitarian": -10,
+            "deontology": 5,
+            "virtueEthics": 0,
+            "careEthics": -5
+          }
         }
-      },      
-      {
-        "id": "4",
-        "question": "You're stranded in a lifeboat with two strangers. There's only room for one more person. One is a doctor who could save many lives, the other is a child who could live a full life. Who do you save?",
-        "background": "/images/lifeboat.jpg",
-        "choices": [
-          "Save the doctor - Save many lives in the future, even at the cost of a child's life.",
-          "Save the child - Preserve innocence and a future, even at the cost of many lives."
-        ],
-        "categoryEffects": {
-          "virtueEthics": 10,
-          "careEthics": 5,
-          "deontology": -10,
-          "existentialism": -5
+      ]
+    },
+    {
+      "id": "4",
+      "question": "You come across a person in need of urgent medical help. You only have enough resources to save one person, and you must choose between them and someone else in even more dire need. Do you act to save one, or do nothing?",
+      "background": "/images/emergency.jpg",
+      "choices": [
+        {
+          "text": "Save the person - Prioritize their needs.",
+          "categoryEffects": {
+            "utilitarian": 5,
+            "deontology": 5,
+            "virtueEthics": 10,
+            "careEthics": 15
+          }
+        },
+        {
+          "text": "Do nothing - Let fate decide.",
+          "categoryEffects": {
+            "utilitarian": -5,
+            "deontology": 0,
+            "virtueEthics": -5,
+            "careEthics": -10
+          }
         }
-      },
-      {
-        "id": "5",
-        "question": "Your country has passed a law that requires constant surveillance of all citizens for national security. You’ve been offered a job as part of the monitoring team. You’ll help prevent terrorist attacks and save lives, but you’ll infringe on people’s privacy. Do you join?",
-        "background": "/images/surveillance.jpg",
-        "choices": [
-          "Join the program - Protect the nation, but compromise privacy.",
-          "Refuse - Protect individual freedoms, but risk national security."
-        ],
-        "categoryEffects": {
-          "socialContractTheory": 10,
-          "egoism": -5,
-          "utilitarian": 5,
-          "moralRelativism": 0
+      ]
+    },
+    {
+      "id": "5",
+      "question": "Your best friend confesses they are responsible for a serious crime, but they beg for your help in covering it up. Do you support them or report it?",
+      "background": "/images/crime.jpg",
+      "choices": [
+        {
+          "text": "Help them - Keep their secret.",
+          "categoryEffects": {
+            "utilitarian": 0,
+            "deontology": -10,
+            "socialContractTheory": -5,
+            "feministEthics": -5
+          }
+        },
+        {
+          "text": "Report them - Tell the authorities.",
+          "categoryEffects": {
+            "utilitarian": 5,
+            "deontology": 10,
+            "socialContractTheory": 5,
+            "feministEthics": 10
+          }
         }
-      },
-      {
-        "id": "6",
-        "question": "You discover that a corporation funding your dream research project is secretly causing severe environmental damage. Exposing them would ruin your career and jeopardize the future of your work. Do you blow the whistle or stay quiet?",
-        "background": "/images/corporation.jpg",
-        "choices": [
-          "Expose the corporation - Risk your career to protect the environment.",
-          "Stay silent - Continue your work, but enable the harm."
-        ],
-        "categoryEffects": {
-          "virtueEthics": -5,
-          "utilitarian": -10,
-          "feministEthics": -15,
-          "egoism": 10
-        }
-      },
-      {
-        "id": "7",
-        "question": "You are part of a secret government project to create genetically engineered children to perform specific roles in society. One of these children is born with a debilitating condition that could result in a short, painful life. You have the option to euthanize this child to ensure the other genetically engineered children fulfill their roles and contribute to society. Do you do it?",
-        "background": "/images/genetics.jpg",
-        "choices": [
-          "Euthanize the child - Ensure society's benefit, but sacrifice innocence.",
-          "Let the child live - Let the child experience life, but risk societal failure."
-        ],
-        "categoryEffects": {
-          "utilitarian": 15,
-          "deontology": -20,
-          "virtueEthics": -10,
-          "socialContractTheory": 10
-        }
-      },
-      {
-        "id": "8",
-        "question": "A close family member has been brutally murdered by a criminal who has escaped justice. You have the opportunity to track down and kill the murderer. Your actions will not bring any legal consequences, but you will destroy your personal life and the lives of others close to you. Do you take revenge?",
-        "background": "/images/revenge.jpg",
-        "choices": [
-          "Kill the murderer - Avenging your loved one, no matter the cost.",
-          "Leave the murderer - Allow the law to deal with it, even if it means no justice."
-        ],
-        "categoryEffects": {
-          "egoism": 10,
-          "deontology": -15,
-          "careEthics": -10,
-          "feministEthics": -5
-        }
-      },
-      {
-        "id": "9",
-        "question": "A dangerous virus outbreak is occurring, and you have access to the vaccine. There are only enough doses for 10 people, but there are 100 others in need. You know your child needs the vaccine to survive. You could take the last dose for yourself, ensuring your child’s survival, but condemning others to die. Do you take the vaccine?",
-        "background": "/images/virus.jpg",
-        "choices": [
-          "Take the vaccine - Save your child, but let others suffer.",
-          "Give the vaccine away - Sacrifice your child's life to save others."
-        ],
-        "categoryEffects": {
-          "utilitarian": -10,
-          "egoism": 15,
-          "socialContractTheory": -5,
-          "moralRelativism": 5
-        }
-      },
-      {
-        "id": "10",
-        "question": "A criminal syndicate has kidnapped your sibling and demands a ransom of $1 million for their release. You have access to a large sum of money, but if you give the money, it will bankrupt your entire family and put everyone else at risk. Do you pay the ransom?",
-        "background": "/images/kidnapping.jpg",
-        "choices": [
-          "Pay the ransom - Save your sibling, even at the expense of your family’s well-being.",
-          "Refuse to pay - Risk losing your sibling, but protect the greater good."
-        ],
-        "categoryEffects": {
-          "careEthics": 10,
-          "virtueEthics": 5,
-          "deontology": -5,
-          "existentialism": -10
-        }
-      },
-      {
-        "id": "11",
-        "question": "You have discovered that you are a clone, and your original self is still alive and well. You are offered a choice: you can sacrifice yourself to ensure the original self can live a life free of existential confusion, or you can continue to exist while causing a great deal of pain for the original, who now faces an identity crisis. Do you sacrifice yourself?",
-        "background": "/images/clone.jpg",
-        "choices": [
-          "Sacrifice yourself - Give up your life to restore the original's peace of mind.",
-          "Live on - Let the original suffer, but preserve your own existence."
-        ],
-        "categoryEffects": {
-          "utilitarian": 10,
-          "deontology": -10,
-          "virtueEthics": -5,
-          "moralRelativism": 0
-        }
-      },
-      {
-        "id": "12",
-        "question": "A dangerous prisoner who you know personally has escaped from jail. You’ve been offered a bribe to keep quiet about their whereabouts. If you report them, they will be caught, but they will face harsh punishment. If you keep quiet, you risk other lives being lost, but you would protect your own. Do you betray them?",
-        "background": "/images/prison.jpg",
-        "choices": [
-          "Report the prisoner - Uphold the law, even if it hurts someone you care about.",
-          "Keep quiet - Protect your own safety and avoid betrayal, but let others suffer."
-        ],
-        "categoryEffects": {
-          "socialContractTheory": 10,
-          "feministEthics": -5,
-          "careEthics": 0,
-          "egoism": 10
-        }
-      },
-      {
-        "id": "13",
-        "question": "You are a world-renowned doctor with access to a cutting-edge cancer treatment that can save a life. However, the treatment is experimental and comes with severe side effects, including the risk of killing the patient in a painful manner. There are two patients in desperate need of the treatment: one is a young child with a bright future, and the other is an elderly person nearing the end of their life. Both have a 50% chance of survival. Do you administer the treatment to the child or the elderly patient?",
-        "background": "/images/cancer_treatment.jpg",
-        "choices": [
-          "Treat the child - Save a future, but risk unnecessary pain.",
-          "Treat the elderly patient - Let them live their final days in peace, even if it means risking a painful death."
-        ],
-        "categoryEffects": {
-          "utilitarian": 10,
-          "deontology": -5,
-          "careEthics": 15,
-          "virtueEthics": -10
-        }
-      },
-      {
-        "id": "14",
-        "question": "You and a group of strangers are trapped in a collapsing building. There is only one escape route, and the only way to survive is to push others out of the way. A woman in your group is pregnant and cannot move fast enough to escape. You see that the others are ready to fight for their survival, and pushing her could allow you to escape. Do you push her out of the way or help her to escape, risking your own life in the process?",
-        "background": "/images/building_collapsing.jpg",
-        "choices": [
-          "Push her out of the way - Ensure your own survival, even if it means causing harm.",
-          "Help her escape - Risk your life to help another, even if it costs your own survival."
-        ],
-        "categoryEffects": {
-          "utilitarian": -5,
-          "egoism": 10,
-          "socialContractTheory": 0,
-          "feministEthics": -5
-        }
-      },
-      {
-        "id": "15",
-        "question": "A runaway trolley is headed towards a child who is tied to the tracks. You can switch the trolley’s path, but this will lead it toward a group of five elderly people who have lived full lives. Do you switch the trolley?",
-        "background": "/images/trolley_reversed.jpg",
-        "choices": [
-          "Switch the trolley - Save the five elderly people, sacrifice the child.",
-          "Do nothing - Let fate decide, even if the child dies."
-        ],
-        "categoryEffects": {
-          "utilitarian": 5,
-          "deontology": -10,
-          "careEthics": -15,
-          "virtueEthics": 0
-        }
-      },
-      {
-        "id": "16",
-        "question": "You accidentally discover that a close friend has committed a serious crime, but they are offering you a million dollars to keep quiet. If you expose them, it will destroy their life, but the crime is severe and could harm many others in the future. Do you betray your friend for the greater good or take the money and stay quiet?",
-        "background": "/images/secret.jpg",
-        "choices": [
-          "Expose the crime - Do the right thing, even if it means losing a friend and their wealth.",
-          "Stay quiet - Protect your friend, even if it means allowing them to continue their harmful behavior."
-        ],
-        "categoryEffects": {
-          "utilitarian": 10,
-          "deontology": -10,
-          "egoism": 15,
-          "moralRelativism": 0
-        }
-      },
-      {
-        "id": "17",
-        "question": "Scientists have developed a way to bring the dead back to life, but the process is flawed. It’s possible that reanimating someone would return them with severe psychological trauma and disorientation, leading them to suffer for the rest of their lives. You are given the opportunity to bring back a loved one who died prematurely. Do you go through with the reanimation process?",
-        "background": "/images/reanimation.jpg",
-        "choices": [
-          "Reanimate the loved one - Bring them back to life, knowing they may suffer.",
-          "Leave them dead - Allow them to rest in peace and avoid the suffering they may face."
-        ],
-        "categoryEffects": {
-          "utilitarian": -5,
-          "deontology": -10,
-          "careEthics": 10,
-          "moralRelativism": 0
-        }
-      },
-      {
-        "id": "18",
-        "question": "You are told that if you kill your loved one, they will sacrifice themselves to save thousands of innocent people. Their death will instantly prevent a catastrophic event that would otherwise wipe out an entire city. If you refuse, your loved one lives, but thousands will perish. Do you carry out the act, or do you refuse to make that choice, hoping that another solution will appear?",
-        "background": "/images/sacrifice_loved_one.jpg",
-        "choices": [
-          "Kill your loved one - Sacrifice them for the greater good.",
-          "Refuse - Let your loved one live, even if it means the deaths of many innocent people."
-        ],
-        "categoryEffects": {
-          "utilitarian": 10,
-          "deontology": -15,
-          "careEthics": -20,
-          "virtueEthics": -10
-        }
-      }
-    ],
+      ]
+    }
+  ],
     "userScores": [
       {
         "userId": "1",
         "name": "Thisbe",
         "utilitarian": 0,
-        "deontology": 0
+        "deontology": 0,
+        "virtueEthics": 0,
+        "careEthics": 0,
+        "socialContractTheory": 0,
+        "feministEthics": 0
       },
       {
         "userId": "2",
         "name": "Sydney",
         "utilitarian": 5,
-        "deontology": -3
+        "deontology": -3,
+        "virtueEthics": 2,
+        "careEthics": 1,
+        "socialContractTheory": -2,
+        "feministEthics": 0
       }
     ]
-  }
+}
   
