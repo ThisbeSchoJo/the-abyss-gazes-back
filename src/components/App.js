@@ -101,7 +101,8 @@ function App() {
           scores: scores,
           currentQuestionIndex: currentQuestionIndex,
           handleChoice : handleChoice,
-          setUserName: setUserName
+          setUserName: setUserName,
+          userName, userName
         }
       }/>
       
