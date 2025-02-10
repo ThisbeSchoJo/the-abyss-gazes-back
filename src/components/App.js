@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import { Outlet } from "react-router-dom";
 import { useState, useEffect } from "react";
 import '../App.css';
@@ -9,11 +8,21 @@ function App() {
   //State for dilemmas
   const [dilemmas, setDilemmas] = useState([])
   //State for tracking user morality scores
-  const [scores, setScores] = useState({utilitarian: 0, deontology: 0})
+  //NEED TO UPDATE AT END TO INCLUDE ALL RELEVANT CATEGORIES
+  const [scores, setScores] = useState({
+    utilitarian: 0, 
+    deontology: 0,
+    virtueEthics: 0,
+    careEthics: 0,
+    socialContractTheory: 0,
+    feministEthics: 0
+  })
   //State to track the current question index
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   
-  useEffect(retrieveDilemmas, [])
+  useEffect(() => {
+    retrieveDilemmas()
+  }, [])
 
   function retrieveDilemmas(){
     fetch("http://localhost:4000/questions")
@@ -52,20 +61,16 @@ function App() {
       return newScores
     })
 
-    //Log the final scores if at end or move to next dilemma
-    setTimeout(() => {
-      if (currentQuestionIndex === (dilemmas.length - 1)) {
-        console.log(`Game Over - Final Scores:${scores}`)
-      } 
-      else {
-        setCurrentQuestionIndex((prevIndex) => prevIndex +1)
-      }
-    }, 300) //short delay for smooth transition
-        // setCurrentQuestionIndex((prevIndex) => prevIndex + 1)
-      // }
-    // })
+    //move to the next question
+    setCurrentQuestionIndex((prevIndex) => prevIndex +1 )
   }
-  
+
+    //Log the final scores if at end or move to next dilemma
+  useEffect(() => {
+    if (currentQuestionIndex === (dilemmas.length - 1)) {
+      console.log(`Game Over - Final Scores:${scores}`)
+    }
+  }, [scores, currentQuestionIndex, dilemmas.length])  
 
   return (
     <div className="app">
