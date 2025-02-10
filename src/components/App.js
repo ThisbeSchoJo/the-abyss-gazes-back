@@ -42,24 +42,12 @@ function App() {
       const newScores = {
         //NEED TO UPDATE INTO LOOP INSTEAD OF HARD CODED
         //DELETE/ADD WHICHEVER ARE NEEDED AT THE END
-        utilitarian: prevScores.utilitarian + (categoryEffects.utilitarian),
-        deontology: prevScores.deontology + (categoryEffects.deontology),
-        virtueEthics: prevScores.virtueEthics + (categoryEffects.virtueEthics),
-        // egoism: prevScores.egoism + (categoryEffects.egoism),
-        careEthics: prevScores.careEthics + (categoryEffects.careEthics),
-        // justice: prevScores.justice + (categoryEffects.justice),
-        // relativism: prevScores.relativism + (categoryEffects.relativism),
-        // absolutism: prevScores.absolutism + (categoryEffects.absolutism),
-        // contractualism: prevScores.contractualism + (categoryEffects.contractualism),
-        // pragmatism: prevScores.pragmatism + (categoryEffects.pragmatism),
-        // existentialism: prevScores.existentialism + (categoryEffects.existentialism),
-        // humanitarianism: prevScores.humanitarianism + (categoryEffects.humanitarianism),
-        // altruism: prevScores.altruism + (categoryEffects.altruism),
-        // environmental: prevScores.environmental + (categoryEffects.environmental),
-        // confucian: prevScores.confucian + (categoryEffects.confucian),
-        feministEthics: prevScores.feministEthics + (categoryEffects.feministEthics),
-        socialContractTheory: prevScores.socialContractTheory + (categoryEffects.socialContractTheory)
-        // spiritual: prevScores.spiritual + (categoryEffects.spiritual),
+        utilitarian: prevScores.utilitarian + (categoryEffects.utilitarian || 0),
+        deontology: prevScores.deontology + (categoryEffects.deontology || 0),
+        virtueEthics: prevScores.virtueEthics + (categoryEffects.virtueEthics || 0),
+        careEthics: prevScores.careEthics + (categoryEffects.careEthics || 0),
+        socialContractTheory: prevScores.socialContractTheory + (categoryEffects.socialContractTheory || 0),
+        feministEthics: prevScores.feministEthics + (categoryEffects.feministEthics ||0)
       }
       return newScores
     })

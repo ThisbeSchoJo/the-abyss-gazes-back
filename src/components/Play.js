@@ -12,20 +12,19 @@ function Play(){
         return null
     }
 
-    //Handle when a uesr selects a choice
+    //Handle when a user selects a choice
     function handleChoiceSelection(choice) {
         //Get the category effects based on the selected choice
         const categoryEffects = choice.categoryEffects
         console.log(`Selected choice:${choice.text}`)
-        console.log(`Category effects:${categoryEffects.utilitarian}`)
+        console.log(`Utilitarian:${categoryEffects.utilitarian}`)
+        console.log(`Deontology:${categoryEffects.deontology}`)
+        console.log(`Virtue Ethics:${categoryEffects.virtueEthics}`)
+        console.log(`Care Ethics:${categoryEffects.careEthics}`)
+        console.log(`Social Contract Theory:${categoryEffects.socialContractTheory}`)
+        console.log(`Feminist Ethics: ${categoryEffects.feministEthics}`)
         handleChoice(categoryEffects) //call the callback to handle the answer
     }
-    
-            // "deontology": -10,
-            // "virtueEthics": 5,
-            // "careEthics": -5
-
-
 
     return (
         <div key={currentDilemma.id}>
@@ -40,7 +39,10 @@ function Play(){
                 <button onClick={() => handleChoiceSelection(currentDilemma.choices[1])}>{currentDilemma.choices[1].text}</button>
             </div>
             {/* <h3>{currentDilemma.categoryEffects.utilitarian}</h3>
-            <h3>{currentDilemma.categoryEffects.deontology}</h3> */}
+            <h3>{currentDilemma.categoryEffects.deontology}</h3> 
+            <h3>{currentDilemma.categoryEffects.virtueEthics}</h3> 
+            <h3>{currentDilemma.categoryEffects.careEthics}</h3>  */}
+            
         </div>
     )
 }

@@ -158,6 +158,126 @@
         "feministEthics": null,
         "socialContractTheory": null
       }
+    },
+    {
+      "id": "b114",
+      "userName": "alex",
+      "scores": {
+        "utilitarian": -10,
+        "deontology": 5,
+        "virtueEthics": null,
+        "careEthics": null,
+        "feministEthics": null,
+        "socialContractTheory": null
+      }
+    },
+    {
+      "id": "b006",
+      "userName": "",
+      "scores": {
+        "utilitarian": 18,
+        "deontology": 0,
+        "virtueEthics": null,
+        "careEthics": null,
+        "feministEthics": null,
+        "socialContractTheory": null
+      }
+    },
+    {
+      "id": "8550",
+      "userName": "",
+      "scores": {
+        "utilitarian": 0,
+        "deontology": 10,
+        "virtueEthics": null,
+        "careEthics": null,
+        "feministEthics": null,
+        "socialContractTheory": null
+      }
+    },
+    {
+      "id": "94a4",
+      "userName": "",
+      "scores": {
+        "utilitarian": 0,
+        "deontology": 10,
+        "virtueEthics": null,
+        "careEthics": null,
+        "feministEthics": null,
+        "socialContractTheory": null
+      }
+    },
+    {
+      "id": "dbfe",
+      "userName": "",
+      "scores": {
+        "utilitarian": 0,
+        "deontology": 10,
+        "virtueEthics": null,
+        "careEthics": null,
+        "feministEthics": null,
+        "socialContractTheory": null
+      }
+    },
+    {
+      "id": "1f98",
+      "userName": "",
+      "scores": {
+        "utilitarian": 0,
+        "deontology": 10,
+        "virtueEthics": null,
+        "careEthics": null,
+        "feministEthics": null,
+        "socialContractTheory": null
+      }
+    },
+    {
+      "id": "439b",
+      "userName": "",
+      "scores": {
+        "utilitarian": 0,
+        "deontology": 10,
+        "virtueEthics": null,
+        "careEthics": null,
+        "feministEthics": null,
+        "socialContractTheory": null
+      }
+    },
+    {
+      "id": "80d5",
+      "userName": "",
+      "scores": {
+        "utilitarian": 0,
+        "deontology": 10,
+        "virtueEthics": null,
+        "careEthics": null,
+        "feministEthics": null,
+        "socialContractTheory": null
+      }
+    },
+    {
+      "id": "71e3",
+      "userName": "",
+      "scores": {
+        "utilitarian": 0,
+        "deontology": 10,
+        "virtueEthics": null,
+        "careEthics": null,
+        "feministEthics": null,
+        "socialContractTheory": null
+      }
+    },
+    {
+      "id": "ea04",
+      "userName": "",
+      "scores": {
+        "utilitarian": -15,
+        "deontology": -5,
+        "virtueEthics": -5,
+        "careEthics": -15,
+        "socialContractTheory": -5,
+        "feministEthics": -10
+      }
     }
   ]
 }
