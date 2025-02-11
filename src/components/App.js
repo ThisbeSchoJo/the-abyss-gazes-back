@@ -83,7 +83,6 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Header />
       <Outlet context={
         {
           dilemmas: dilemmas,
