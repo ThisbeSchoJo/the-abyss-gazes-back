@@ -124,152 +124,38 @@
           }
         }
       ]
+    },
+    {
+      "id": "6",
+      "question": "You and a group of people are stranded in a lifeboat in the middle of the ocean. There is only enough food and water for half of the people to survive until rescue arrives. Do you sacrifice the weaker members of the group to ensure the survival of the stronger ones, or do you try to distribute the resources evenly and risk everyone dying?",
+      "background": "/images/lifeboat.jpg",
+      "choices": [
+        {
+          "text": "Sacrifice the weak.",
+          "categoryEffects": {
+            "utilitarian": 0,
+            "deontology": -10,
+            "socialContractTheory": -5,
+            "feministEthics": -5
+          }
+        },
+        {
+          "text": "Evenly distribute resources.",
+          "categoryEffects": {
+            "utilitarian": 5,
+            "deontology": 10,
+            "socialContractTheory": 5,
+            "feministEthics": 10
+          }
+        }
+      ]
     }
   ],
   "userScores": [
     {
-      "userId": "1",
-      "name": "Thisbe",
-      "utilitarian": 0,
-      "deontology": 0,
-      "virtueEthics": 0,
-      "careEthics": 0,
-      "socialContractTheory": 0,
-      "feministEthics": 0
-    },
-    {
-      "userId": "2",
-      "name": "Sydney",
-      "utilitarian": 5,
-      "deontology": -3,
-      "virtueEthics": 2,
-      "careEthics": 1,
-      "socialContractTheory": -2,
-      "feministEthics": 0
-    },
-    {
-      "id": "c209",
-      "userName": "",
-      "scores": {
-        "utilitarian": 3,
-        "deontology": -15,
-        "virtueEthics": null,
-        "careEthics": null,
-        "feministEthics": null,
-        "socialContractTheory": null
-      }
-    },
-    {
-      "id": "b114",
-      "userName": "alex",
-      "scores": {
-        "utilitarian": -10,
-        "deontology": 5,
-        "virtueEthics": null,
-        "careEthics": null,
-        "feministEthics": null,
-        "socialContractTheory": null
-      }
-    },
-    {
-      "id": "b006",
-      "userName": "",
-      "scores": {
-        "utilitarian": 18,
-        "deontology": 0,
-        "virtueEthics": null,
-        "careEthics": null,
-        "feministEthics": null,
-        "socialContractTheory": null
-      }
-    },
-    {
-      "id": "8550",
-      "userName": "",
-      "scores": {
-        "utilitarian": 0,
-        "deontology": 10,
-        "virtueEthics": null,
-        "careEthics": null,
-        "feministEthics": null,
-        "socialContractTheory": null
-      }
-    },
-    {
-      "id": "94a4",
-      "userName": "",
-      "scores": {
-        "utilitarian": 0,
-        "deontology": 10,
-        "virtueEthics": null,
-        "careEthics": null,
-        "feministEthics": null,
-        "socialContractTheory": null
-      }
-    },
-    {
-      "id": "dbfe",
-      "userName": "",
-      "scores": {
-        "utilitarian": 0,
-        "deontology": 10,
-        "virtueEthics": null,
-        "careEthics": null,
-        "feministEthics": null,
-        "socialContractTheory": null
-      }
-    },
-    {
-      "id": "1f98",
-      "userName": "",
-      "scores": {
-        "utilitarian": 0,
-        "deontology": 10,
-        "virtueEthics": null,
-        "careEthics": null,
-        "feministEthics": null,
-        "socialContractTheory": null
-      }
-    },
-    {
-      "id": "439b",
-      "userName": "",
-      "scores": {
-        "utilitarian": 0,
-        "deontology": 10,
-        "virtueEthics": null,
-        "careEthics": null,
-        "feministEthics": null,
-        "socialContractTheory": null
-      }
-    },
-    {
-      "id": "80d5",
-      "userName": "",
-      "scores": {
-        "utilitarian": 0,
-        "deontology": 10,
-        "virtueEthics": null,
-        "careEthics": null,
-        "feministEthics": null,
-        "socialContractTheory": null
-      }
-    },
-    {
-      "id": "71e3",
-      "userName": "",
-      "scores": {
-        "utilitarian": 0,
-        "deontology": 10,
-        "virtueEthics": null,
-        "careEthics": null,
-        "feministEthics": null,
-        "socialContractTheory": null
-      }
-    },
-    {
       "id": "ea04",
-      "userName": "",
+      "image": "",
+      "userName": "hannah",
       "scores": {
         "utilitarian": -15,
         "deontology": -5,
@@ -281,12 +167,25 @@
     },
     {
       "id": "2151",
-      "userName": "hkh",
+      "userName": "alex",
+      "image": "https://th.bing.com/th/id/OIP.IGNf7GuQaCqz_RPq5wCkPgHaLH?w=121&h=181&c=7&r=0&o=5&dpr=2&pid=1.7",
       "scores": {
         "utilitarian": -5,
         "deontology": 0,
         "virtueEthics": 10,
         "careEthics": 10,
+        "socialContractTheory": -5,
+        "feministEthics": -10
+      }
+    },
+    {
+      "id": "157e",
+      "userName": "sydney",
+      "scores": {
+        "utilitarian": 15,
+        "deontology": -15,
+        "virtueEthics": 15,
+        "careEthics": 5,
         "socialContractTheory": -5,
         "feministEthics": -10
       }

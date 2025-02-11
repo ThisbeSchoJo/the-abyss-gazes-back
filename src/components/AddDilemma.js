@@ -1,20 +1,22 @@
 function AddDilemma(){
     return (
-        <form className="app">
-            <label >Question: </label>
-            <input type="text" name= "question" />
-            <br/><br/>
-            <label>Background: </label>
-            <input type="text" name= "background" />
-            <br></br>
-            <label>Choices: </label>
-            <input type="text" name= "choices" />
-            <br/><br/>
-            <label>Category Effects: </label>
-            <input type="text" name= "category-effects" />
-            <br/><br/>
-            <input type="submit" value="Add Dilemma" />
-        </form>
+        <div className="form-container">
+            <form className="app">
+                <label >Question: </label>
+                <input type="text" name= "question" />
+                <br/><br/>
+                <label>Background: </label>
+                <input type="text" name= "background" />
+                <br></br>
+                <label>Choices: </label>
+                <input type="text" name= "choices" />
+                <br/><br/>
+                <label>Category Effects: </label>
+                <input type="text" name= "category-effects" />
+                <br/><br/>
+                <input type="submit" value="Add Dilemma" />
+            </form>
+        </div>
     )
 }
 

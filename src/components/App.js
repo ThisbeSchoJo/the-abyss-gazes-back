@@ -52,12 +52,13 @@ function App() {
       return newScores
     })
 
-    //move to the next question
+    //move to the next question -callback function to update state
     setCurrentQuestionIndex((prevIndex) => prevIndex +1 )
   }
 
     //Log the final scores if at end or move to next dilemma
   useEffect(() => {
+    if (!userName || currentQuestionIndex < dilemmas.length) return //Exit early if userName is not set or questions are not finished
     if (currentQuestionIndex === (dilemmas.length - 1)) {
       const resultData = {
         userName: userName,
@@ -90,7 +91,7 @@ function App() {
           currentQuestionIndex: currentQuestionIndex,
           handleChoice : handleChoice,
           setUserName: setUserName,
-          userName, userName
+          userName, userName,
         }
       }/>
       

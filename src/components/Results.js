@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
-
+import User from "./User";
 
 function Results() {
     const { userName, setUserName, scores } = useOutletContext()
     const [isNameSubmitted, setIsNameSubmitted] = useState(false)
+    const [userScores, setUserScores] = useState([])
 
     const handleNameSubmit = (event) => {
         event.preventDefault()
@@ -16,6 +17,12 @@ function Results() {
             alert("Please enter your name!")
         }
     }
+
+    useEffect(() => {
+        fetch("http://localhost:4000/userScores")
+        .then(response => response.json())
+        .then(userData => setUserScores(userData)) //updates state, triggering re-render
+    }, [])
 
 //if user hasn't submitted their name, show the form
 if (!isNameSubmitted) {
@@ -40,6 +47,8 @@ if (!scores) {
 }
 
 
+
+
 return(
     <div className="results">
         <h1>Your Results</h1>
@@ -50,6 +59,12 @@ return(
             <p>Care Ethics: {scores.careEthics}</p>
             <p>Social Contract Theory: {scores.socialContractTheory}</p>
             <p>Feminist Ethics: {scores.feministEthics}</p>
+        <h2>All User Scores</h2>
+            <ul>
+                {userScores.map(user => (
+                    <User key={user.id} user={user} />
+                ))}
+            </ul>
     </div>
     )
 }

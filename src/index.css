@@ -39,3 +39,56 @@ nav > a {
   object-fit: cover; /* Cover the entire container */
   z-index: -1; /* Put it behind text and buttons */
 }
+
+.form-container {
+  background: #222; /* Dark background for contrast */
+  color: white; /* Light text for readability */
+  padding: 2px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
+  max-width: 200px; /* Adjust as needed */
+  height: 700;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.typing-effect {
+  font-family: monospace;
+    font-size: 40px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #fff; /* Cursor effect */
+    padding-right: 5px; /* Space between text and cursor */
+    width: 0; /* Initially hides the text */
+    animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  0% {
+      width: 0;
+  }
+  100% {
+      width: 33%;
+  }
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+  0%, 50% {
+      border-color: transparent;
+  }
+  50.1%, 100% {
+      border-color: #fff;
+  }
+}
+
+/* Center the navbar */
+.navbar {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically if needed */
+  width: 100%;
+}
