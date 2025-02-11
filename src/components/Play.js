@@ -34,7 +34,7 @@ function Play(){
             className="background-image"
             />
             <h1>{currentDilemma.question}</h1>
-            <div>
+            <div className="dilemma-container">
                 <button onClick={() => handleChoiceSelection(currentDilemma.choices[0])}>{currentDilemma.choices[0].text}</button>
                 <button onClick={() => handleChoiceSelection(currentDilemma.choices[1])}>{currentDilemma.choices[1].text}</button>
             </div>
