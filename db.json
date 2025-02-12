@@ -349,5 +349,67 @@
         "trickster": 0
       }
     }
+  ],
+  "characters": [
+    {
+      "id": 1,
+      "category": "Idealist",
+      "image": "url-to-idealist-image.jpg",
+      "description": "A hopeful character who always believes in the good in people."
+    },
+    {
+      "id": 2,
+      "category": "Pragmatist",
+      "image": "url-to-pragmatist-image.jpg",
+      "description": "A realist who makes decisions based on practical considerations."
+    },
+    {
+      "id": 3,
+      "category": "Guardian",
+      "image": "url-to-guardian-image.jpg",
+      "description": "A protector who always looks out for others and their safety."
+    },
+    {
+      "id": 4,
+      "category": "Opportunist",
+      "image": "url-to-opportunist-image.jpg",
+      "description": "A survivor who takes advantage of every opportunity to get ahead."
+    },
+    {
+      "id": 5,
+      "category": "Rebel",
+      "image": "url-to-rebel-image.jpg",
+      "description": "A chaotic force who challenges authority and embraces unpredictability."
+    },
+    {
+      "id": 6,
+      "category": "Cynic",
+      "image": "url-to-cynic-image.jpg",
+      "description": "A disillusioned character who sees the flaws in everything and everyone."
+    },
+    {
+      "id": 7,
+      "category": "Hedonist",
+      "image": "url-to-hedonist-image.jpg",
+      "description": "A pleasure-seeker who lives for indulgence and enjoyment."
+    },
+    {
+      "id": 8,
+      "category": "Power-Seeker",
+      "image": "url-to-power-seeker-image.jpg",
+      "description": "A dominator who craves power and control over others."
+    },
+    {
+      "id": 9,
+      "category": "Martyr",
+      "image": "url-to-martyr-image.jpg",
+      "description": "A self-sacrificing one who is willing to give up everything for the greater good."
+    },
+    {
+      "id": 10,
+      "category": "Trickster",
+      "image": "url-to-trickster-image.jpg",
+      "description": "A manipulator who uses wit and cunning to get what they want."
+    }
   ]
 }

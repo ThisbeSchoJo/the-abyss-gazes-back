@@ -3,7 +3,7 @@ import App from "./components/App";
 import ErrorPage from "./components/ErrorPage";
 import Home from "./components/Home";
 import Play from "./components/Play";
-import AddDilemma from "./components/AddDilemma";
+import CharacterList from "./components/CharacterList";
 import Results from "./components/Results";
 
 
@@ -22,8 +22,8 @@ const routes = [
                 element: <Play />
             },
             {
-                path: "/add-dilemma",
-                element: <AddDilemma />
+                path: "/character-list",
+                element: <CharacterList />
             },
             {
                 path: "/results",

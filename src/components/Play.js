@@ -5,13 +5,8 @@ function Play(){
 
     const currentDilemma = dilemmas[currentQuestionIndex]
 
-    if (!currentDilemma) {
-        return <h1>Loading dilemma...</h1>;
-      }
-
     //Handle when a user selects a choice
     function handleChoiceSelection(choice) {
-        console.log("hello")
         //Get the category effects based on the selected choice
         const categoryEffects = choice.categoryEffects
         console.log(`Selected choice:${choice.text}`)
@@ -20,7 +15,7 @@ function Play(){
         console.log(`Opportunist:${categoryEffects.opportunist}`)
         handleChoice(categoryEffects) //call the callback to handle the answer
     }
-// Make button component
+
     return (
             <div>
                 <div className="background" style={{ backgroundImage: `url(${currentDilemma.background})` }}>
