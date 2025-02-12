@@ -2,7 +2,6 @@ import { Outlet } from "react-router-dom";
 import { useState, useEffect } from "react";
 import '../App.css';
 import NavBar from "./NavBar";
-import Header from "./Header";
 
 function App() {
   //State for dilemmas
@@ -10,12 +9,16 @@ function App() {
   //State for tracking user morality scores
   //NEED TO UPDATE AT END TO INCLUDE ALL RELEVANT CATEGORIES
   const [scores, setScores] = useState({
-    utilitarian: 0, 
-    deontology: 0,
-    virtueEthics: 0,
-    careEthics: 0,
-    socialContractTheory: 0,
-    feministEthics: 0
+    idealist: 0,
+    pragmatist: 0,
+    guardian: 0,
+    opportunist: 0,
+    rebel: 0,
+    cynic: 0,
+    hedonist: 0,
+    powerSeeker: 0,
+    martyr: 0,
+    trickster: 0
   })
   //State to track the current question index
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)

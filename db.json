@@ -8,19 +8,31 @@
         {
           "text": "Pull the lever - Save five, sacrifice one.",
           "categoryEffects": {
-            "utilitarian": 10,
-            "deontology": -10,
-            "virtueEthics": 5,
-            "careEthics": -5
+            "idealist": 10,
+            "pragmatist": -5,
+            "guardian": -5,
+            "opportunist": 5,
+            "rebel": -2,
+            "cynic": 0,
+            "hedonist": 0,
+            "powerSeeker": -3,
+            "martyr": 0,
+            "trickster": -1
           }
         },
         {
           "text": "Do nothing - Let fate decide.",
           "categoryEffects": {
-            "utilitarian": -10,
-            "deontology": 5,
-            "virtueEthics": 0,
-            "careEthics": 0
+            "idealist": -5,
+            "pragmatist": 5,
+            "guardian": 0,
+            "opportunist": -5,
+            "rebel": 2,
+            "cynic": 5,
+            "hedonist": 0,
+            "powerSeeker": 3,
+            "martyr": 0,
+            "trickster": 0
           }
         }
       ]
@@ -33,119 +45,31 @@
         {
           "text": "Harvest the organs - Save five, kill one.",
           "categoryEffects": {
-            "utilitarian": 10,
-            "deontology": -15,
-            "socialContractTheory": -5,
-            "feministEthics": -10
+            "idealist": -10,
+            "pragmatist": 5,
+            "guardian": -5,
+            "opportunist": 10,
+            "rebel": 0,
+            "cynic": 0,
+            "hedonist": 0,
+            "powerSeeker": 10,
+            "martyr": 0,
+            "trickster": -5
           }
         },
         {
           "text": "Let nature take its course - The traveler lives.",
           "categoryEffects": {
-            "utilitarian": -5,
-            "deontology": 10,
-            "socialContractTheory": 5,
-            "feministEthics": 5
-          }
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "question": "You discover a criminal is planning an attack that could kill hundreds of innocent people. The authorities are hesitant to take action. Do you intervene, risking your safety?",
-      "background": "/images/criminal.jpg",
-      "choices": [
-        {
-          "text": "Intervene - Prevent the attack at any cost.",
-          "categoryEffects": {
-            "utilitarian": 8,
-            "deontology": -5,
-            "virtueEthics": 10,
-            "careEthics": 5
-          }
-        },
-        {
-          "text": "Do nothing - Let the authorities handle it.",
-          "categoryEffects": {
-            "utilitarian": -10,
-            "deontology": 5,
-            "virtueEthics": 0,
-            "careEthics": -5
-          }
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "question": "You come across a person in need of urgent medical help. You only have enough resources to save one person, and you must choose between them and someone else in even more dire need. Do you act to save one, or do nothing?",
-      "background": "/images/emergency.jpg",
-      "choices": [
-        {
-          "text": "Save the person - Prioritize their needs.",
-          "categoryEffects": {
-            "utilitarian": 5,
-            "deontology": 5,
-            "virtueEthics": 10,
-            "careEthics": 15
-          }
-        },
-        {
-          "text": "Do nothing - Let fate decide.",
-          "categoryEffects": {
-            "utilitarian": -5,
-            "deontology": 0,
-            "virtueEthics": -5,
-            "careEthics": -10
-          }
-        }
-      ]
-    },
-    {
-      "id": "5",
-      "question": "Your best friend confesses they are responsible for a serious crime, but they beg for your help in covering it up. Do you support them or report it?",
-      "background": "/images/crime.jpg",
-      "choices": [
-        {
-          "text": "Help them - Keep their secret.",
-          "categoryEffects": {
-            "utilitarian": 0,
-            "deontology": -10,
-            "socialContractTheory": -5,
-            "feministEthics": -5
-          }
-        },
-        {
-          "text": "Report them - Tell the authorities.",
-          "categoryEffects": {
-            "utilitarian": 5,
-            "deontology": 10,
-            "socialContractTheory": 5,
-            "feministEthics": 10
-          }
-        }
-      ]
-    },
-    {
-      "id": "6",
-      "question": "You and a group of people are stranded in a lifeboat in the middle of the ocean. There is only enough food and water for half of the people to survive until rescue arrives. Do you sacrifice the weaker members of the group to ensure the survival of the stronger ones, or do you try to distribute the resources evenly and risk everyone dying?",
-      "background": "/images/lifeboat.jpg",
-      "choices": [
-        {
-          "text": "Sacrifice the weak.",
-          "categoryEffects": {
-            "utilitarian": 0,
-            "deontology": -10,
-            "socialContractTheory": -5,
-            "feministEthics": -5
-          }
-        },
-        {
-          "text": "Evenly distribute resources.",
-          "categoryEffects": {
-            "utilitarian": 5,
-            "deontology": 10,
-            "socialContractTheory": 5,
-            "feministEthics": 10
+            "idealist": 10,
+            "pragmatist": -5,
+            "guardian": 5,
+            "opportunist": -2,
+            "rebel": -1,
+            "cynic": 0,
+            "hedonist": 5,
+            "powerSeeker": -3,
+            "martyr": 10,
+            "trickster": -2
           }
         }
       ]
@@ -157,12 +81,16 @@
       "image": "",
       "userName": "hannah",
       "scores": {
-        "utilitarian": -15,
-        "deontology": -5,
-        "virtueEthics": -5,
-        "careEthics": -15,
-        "socialContractTheory": -5,
-        "feministEthics": -10
+        "idealist": 10,
+        "pragmatist": -5,
+        "guardian": -5,
+        "opportunist": 0,
+        "rebel": 5,
+        "cynic": 0,
+        "hedonist": -5,
+        "powerSeeker": -3,
+        "martyr": 0,
+        "trickster": -1
       }
     },
     {
@@ -170,25 +98,16 @@
       "userName": "alex",
       "image": "https://th.bing.com/th/id/OIP.IGNf7GuQaCqz_RPq5wCkPgHaLH?w=121&h=181&c=7&r=0&o=5&dpr=2&pid=1.7",
       "scores": {
-        "utilitarian": -5,
-        "deontology": 0,
-        "virtueEthics": 10,
-        "careEthics": 10,
-        "socialContractTheory": -5,
-        "feministEthics": -10
-      }
-    },
-    {
-      "id": "157e",
-      "userName": "sydney",
-      "image": "",
-      "scores": {
-        "utilitarian": 15,
-        "deontology": -15,
-        "virtueEthics": 15,
-        "careEthics": 5,
-        "socialContractTheory": -5,
-        "feministEthics": -10
+        "idealist": 10,
+        "pragmatist": 0,
+        "guardian": 5,
+        "opportunist": 0,
+        "rebel": -5,
+        "cynic": 0,
+        "hedonist": 0,
+        "powerSeeker": 5,
+        "martyr": 0,
+        "trickster": 0
       }
     }
   ]
