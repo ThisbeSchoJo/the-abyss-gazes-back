@@ -2,35 +2,72 @@
   "dilemmas": [
     {
       "id": "1",
-      "question": "A runaway trolley is headed toward five people tied to the tracks. You can pull a lever to divert it to another track where it will only hit one person. Do you pull the lever?",
-      "background": "/images/trolley.jpg",
+      "question": "Like you're on your subway commute home and see two rats fighting. Do you intervene and stop the fight or do you let the stronger of the two kill the other in front of a crowd of onlookers, including young children?",
+      "background": "/images/subway.jpg",
       "choices": [
         {
-          "text": "Pull the lever - Save five, sacrifice one.",
+          "text": "Intervene - Stop the fight.",
           "categoryEffects": {
-            "idealist": 10,
-            "pragmatist": -5,
-            "guardian": -5,
-            "opportunist": 5,
+            "idealist": 5,
+            "pragmatist": 0,
+            "guardian": 10,
+            "opportunist": -5,
             "rebel": -2,
-            "cynic": 0,
+            "cynic": -3,
             "hedonist": 0,
-            "powerSeeker": -3,
-            "martyr": 0,
-            "trickster": -1
+            "powerSeeker": 0,
+            "martyr": 5,
+            "trickster": 0
           }
         },
         {
-          "text": "Do nothing - Let fate decide.",
+          "text": "Do nothing - Let the stronger rat win.",
           "categoryEffects": {
             "idealist": -5,
             "pragmatist": 5,
-            "guardian": 0,
-            "opportunist": -5,
-            "rebel": 2,
+            "guardian": -5,
+            "opportunist": 10,
+            "rebel": 0,
             "cynic": 5,
             "hedonist": 0,
-            "powerSeeker": 3,
+            "powerSeeker": 0,
+            "martyr": 0,
+            "trickster": -2
+          }
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "question": "You enjoy making pottery in your free time. One strange, loose night you are tempted to eat some… Tastes great and nothing bad seems to happen. You continue eating a little bit of clay as a treat each time you take to the wheel. A year later, you find out you have a mineral deficiency (pika) making you crave your secret treat. Do you seek treatment or keep eating?",
+      "background": "/images/pottery.jpg",
+      "choices": [
+        {
+          "text": "Seek treatment - Stop eating clay and take care of your health.",
+          "categoryEffects": {
+            "idealist": 10,
+            "pragmatist": 5,
+            "guardian": 5,
+            "opportunist": -5,
+            "rebel": -2,
+            "cynic": 0,
+            "hedonist": 0,
+            "powerSeeker": 0,
+            "martyr": 0,
+            "trickster": -3
+          }
+        },
+        {
+          "text": "Keep eating - Indulge in your craving.",
+          "categoryEffects": {
+            "idealist": -5,
+            "pragmatist": -5,
+            "guardian": -5,
+            "opportunist": 10,
+            "rebel": 5,
+            "cynic": 0,
+            "hedonist": 10,
+            "powerSeeker": 0,
             "martyr": 0,
             "trickster": 0
           }
@@ -38,38 +75,223 @@
       ]
     },
     {
-      "id": "2",
-      "question": "You're a doctor with five dying patients who each need a different organ transplant. A healthy traveler comes in for a check-up, and you could secretly take their organs to save the five patients. Do you do it?",
-      "background": "/images/hospital.jpg",
+      "id": "3",
+      "question": "You're at a street hot dog stand in NYC, and the vendor has clearly dropped a hot dog on the ground before placing it in a bun. The customer who ordered it didn’t see. The vendor glances at you with a knowing look, as if daring you to say something.",
+      "background": "/images/hotdog.jpg",
       "choices": [
         {
-          "text": "Harvest the organs - Save five, kill one.",
+          "text": "Tell the customer - Expose the mistake.",
+          "categoryEffects": {
+            "idealist": 10,
+            "pragmatist": -2,
+            "guardian": 10,
+            "opportunist": -5,
+            "rebel": 0,
+            "cynic": -2,
+            "hedonist": -5,
+            "powerSeeker": 0,
+            "martyr": 5,
+            "trickster": -1
+          }
+        },
+        {
+          "text": "Say nothing - Let the customer eat the dog.",
+          "categoryEffects": {
+            "idealist": -5,
+            "pragmatist": 5,
+            "guardian": -2,
+            "opportunist": 10,
+            "rebel": -5,
+            "cynic": 5,
+            "hedonist": 5,
+            "powerSeeker": 0,
+            "martyr": -5,
+            "trickster": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "question": "Your husband keeps getting a stomach bug after he eats ham. He decides he will no longer eat ham to avoid this suffering. You discover it actually is unrelated to ham and actually from the homemade root beer you’ve been making. You HATE ham and you love making root beer. Do you tell him it isn’t the ham and keep making root beer or abandon your new favorite hobby so he can enjoy his favorite snack?",
+      "background": "/images/rootbeer.jpg",
+      "choices": [
+        {
+          "text": "Tell him - End the lie and continue making root beer.",
+          "categoryEffects": {
+            "idealist": 10,
+            "pragmatist": 0,
+            "guardian": 5,
+            "opportunist": -5,
+            "rebel": 0,
+            "cynic": 0,
+            "hedonist": -2,
+            "powerSeeker": 0,
+            "martyr": 5,
+            "trickster": -1
+          }
+        },
+        {
+          "text": "Lie - Keep him from ham, but continue making root beer.",
           "categoryEffects": {
             "idealist": -10,
             "pragmatist": 5,
             "guardian": -5,
             "opportunist": 10,
-            "rebel": 0,
-            "cynic": 0,
+            "rebel": -2,
+            "cynic": 5,
+            "hedonist": 10,
+            "powerSeeker": 0,
+            "martyr": -5,
+            "trickster": 5
+          }
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "question": "Your 10-year-old child commits a heinous crime—murdering another child in cold blood. The justice system won’t believe a child is capable of such a crime, and they are blaming an innocent man instead. If you confess what happened, your child will go to prison for life. If you stay silent, the innocent man will be executed. What do you do?",
+      "background": "/images/crime.jpg",
+      "choices": [
+        {
+          "text": "Confess - Sacrifice your child for the innocent man's life.",
+          "categoryEffects": {
+            "idealist": 5,
+            "pragmatist": 0,
+            "guardian": 10,
+            "opportunist": -10,
+            "rebel": -2,
+            "cynic": -5,
             "hedonist": 0,
-            "powerSeeker": 10,
-            "martyr": 0,
+            "powerSeeker": 0,
+            "martyr": 10,
             "trickster": -5
           }
         },
         {
-          "text": "Let nature take its course - The traveler lives.",
+          "text": "Stay silent - Protect your child at the cost of an innocent man's life.",
+          "categoryEffects": {
+            "idealist": -10,
+            "pragmatist": -5,
+            "guardian": -5,
+            "opportunist": 10,
+            "rebel": 0,
+            "cynic": 5,
+            "hedonist": 0,
+            "powerSeeker": 5,
+            "martyr": 0,
+            "trickster": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "question": "You and a group of people are stranded in a lifeboat in the middle of the ocean. There is only enough food and water for half of the people to survive until rescue arrives. Do you sacrifice the weaker members of the group to ensure the survival of the stronger ones, or do you try to distribute the resources evenly and risk everyone dying?",
+      "background": "/images/lifeboat.jpg",
+      "choices": [
+        {
+          "text": "Sacrifice the weak - Ensure the survival of the strong.",
+          "categoryEffects": {
+            "idealist": -5,
+            "pragmatist": 10,
+            "guardian": 0,
+            "opportunist": 10,
+            "rebel": -5,
+            "cynic": 5,
+            "hedonist": 0,
+            "powerSeeker": 0,
+            "martyr": -10,
+            "trickster": 0
+          }
+        },
+        {
+          "text": "Distribute evenly - Risk everyone's lives to try and save all.",
+          "categoryEffects": {
+            "idealist": 10,
+            "pragmatist": -5,
+            "guardian": 10,
+            "opportunist": -5,
+            "rebel": 0,
+            "cynic": -2,
+            "hedonist": 0,
+            "powerSeeker": -5,
+            "martyr": 10,
+            "trickster": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "question": "You have captured a terrorist who has planted a bomb that will detonate in a crowded area, killing many innocent people. The terrorist will not divulge the location of the bomb, but you have a captive who knows the information. Do you use torture to extract the information and save lives, or do you refrain from torture and risk the lives of the innocent people?",
+      "background": "/images/bomb.jpg",
+      "choices": [
+        {
+          "text": "Torture the captive - Save lives.",
+          "categoryEffects": {
+            "idealist": -5,
+            "pragmatist": 10,
+            "guardian": 0,
+            "opportunist": 5,
+            "rebel": -5,
+            "cynic": 5,
+            "hedonist": 0,
+            "powerSeeker": 10,
+            "martyr": 0,
+            "trickster": -3
+          }
+        },
+        {
+          "text": "Do not torture - Risk innocent lives.",
           "categoryEffects": {
             "idealist": 10,
             "pragmatist": -5,
             "guardian": 5,
-            "opportunist": -2,
-            "rebel": -1,
+            "opportunist": -5,
+            "rebel": 5,
             "cynic": 0,
-            "hedonist": 5,
+            "hedonist": 0,
             "powerSeeker": -3,
-            "martyr": 10,
-            "trickster": -2
+            "martyr": 5,
+            "trickster": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "question": "A scientist discovers the means to clone humans. The clones would be identical to the original person and would have the same memories and personality. The scientist must decide whether to continue with the research, knowing that it raises ethical and moral questions about the value of human life and individuality.",
+      "background": "/images/cloning.jpg",
+      "choices": [
+        {
+          "text": "Continue the research - Advance science, despite moral concerns.",
+          "categoryEffects": {
+            "idealist": -5,
+            "pragmatist": 5,
+            "guardian": 0,
+            "opportunist": 10,
+            "rebel": 0,
+            "cynic": 0,
+            "hedonist": 0,
+            "powerSeeker": 5,
+            "martyr": 0,
+            "trickster": 10
+          }
+        },
+        {
+          "text": "Discontinue the research - Respect individuality and ethical boundaries.",
+          "categoryEffects": {
+            "idealist": 10,
+            "pragmatist": -5,
+            "guardian": 5,
+            "opportunist": -5,
+            "rebel": 0,
+            "cynic": 0,
+            "hedonist": 0,
+            "powerSeeker": -10,
+            "martyr": 5,
+            "trickster": -3
           }
         }
       ]
@@ -94,18 +316,35 @@
       }
     },
     {
-      "id": "2151",
-      "userName": "alex",
-      "image": "https://th.bing.com/th/id/OIP.IGNf7GuQaCqz_RPq5wCkPgHaLH?w=121&h=181&c=7&r=0&o=5&dpr=2&pid=1.7",
+      "id": "ts24",
+      "image": "",
+      "userName": "thisbe",
       "scores": {
         "idealist": 10,
-        "pragmatist": 0,
-        "guardian": 5,
+        "pragmatist": -5,
+        "guardian": -5,
         "opportunist": 0,
-        "rebel": -5,
+        "rebel": 5,
+        "cynic": 0,
+        "hedonist": -5,
+        "powerSeeker": -3,
+        "martyr": 0,
+        "trickster": -1
+      }
+    },
+    {
+      "id": "a0fc",
+      "name": "thisbe",
+      "image": "/images/dog.jpeg",
+      "scores": {
+        "idealist": 0,
+        "pragmatist": 0,
+        "guardian": 0,
+        "opportunist": 0,
+        "rebel": 0,
         "cynic": 0,
         "hedonist": 0,
-        "powerSeeker": 5,
+        "powerSeeker": 0,
         "martyr": 0,
         "trickster": 0
       }

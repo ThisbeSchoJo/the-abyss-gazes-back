@@ -7,7 +7,6 @@ import NavBar from "./NavBar";
 function App() {
   //State for dilemmas
   const [dilemmas, setDilemmas] = useState([])
-  // const dilemmas = db.questions;
   //State for tracking user morality scores
   const [scores, setScores] = useState({
     idealist: 0,
@@ -23,7 +22,6 @@ function App() {
   })
   //State to track the current question index
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
-
   //State to store user's name
   const [userName, setUserName] = useState("")
 
