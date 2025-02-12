@@ -1,25 +1,191 @@
+/* General App Styles */
 body {
-  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
+  font-family: 'Arial', sans-serif;
   background-color: black;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-nav {
+  color: white;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header Styles */
+header {
+  background-color: #000;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  font-size: 1em;
+  margin-top: 10vh; /* Space from the top */
+}
+
+/* Misty text effect */
+.misty-text {
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2; /* Ensure the text is above the mist */
+  animation: misty-fade 10s ease-in-out forwards;
+  color: rgba(255, 255, 255, 0); /* Start with invisible text */
+  max-width: 90%;
+  white-space: nowrap; /* Ensures text stays on a single line */
+  overflow: visible; /* Ensures text is hidden until fully visible */
+}
+
+/* Misty fade-in animation */
+@keyframes misty-fade {
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1), 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  20% {
+    opacity: 0.5;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  40% {
+    opacity: 1;
+    text-shadow: 0 0 0px rgba(255, 255, 255, 1); /* Hold opacity longer */
+  }
+  60% {
+    opacity: 1;
+    text-shadow: 0 0 0px rgba(255, 255, 255, 1); /* Hold opacity longer */
+  }
+  80% {
+    opacity: 0.5;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    opacity: 0;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1), 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+}
+
+
+/* Typing effect animation */
+@keyframes typing {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+/* Mist Background */
+.mist {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/black-tie.png');
+  background-size: cover;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 1;
+  animation: moving-mist 10s linear infinite;
+}
+
+@keyframes moving-mist {
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 100%; }
+}
+
+/* Button Styles */
+button {
+  padding: 10px 30px;
+  font-size: 1.2em;
+  margin: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex: 1;
+  min-width: 150px;
+  max-width: 200px;
+  min-height: 70px;
+}
+
+button:hover {
+  background-color: rgb(94, 90, 90);
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Question and Results Section */
+.question-container, .results-container {
+  background-color: white;
+  padding: 20px;
+  width: 80%;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.question-container h2, .results-container h2 {
+  font-size: 1.5em;
+}
+
+.results-container p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+/* User Input Styles */
+input[type="text"] {
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  width: 60%;
+  text-align: center;
+}
+
+input[type="text"]:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .app {
+    padding: 20px;
+  }
+
+  .question-container, .results-container {
+    width: 90%;
+  }
+
+  button {
+    font-size: 1em;
+  }
+}
+
+/* Navbar Styles */
+nav {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  opacity: 0.3;
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
 }
 
 nav > a {
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: #333;
   padding: 10px;
-  width: 100%;
+  background-color: #333;
   color: white;
   font-size: 1.2em;
   display: flex;
@@ -28,93 +194,12 @@ nav > a {
   text-align: center;
 }
 
-.background-image {
-  position: absolute; /* Position it behind the content */
-  top: 0;
-  left: 0;
-  width: 100%; /* Make image fill width */
-  height: 100%; /* Make image fill height */
-  object-fit: cover; /* Cover the entire container */
-  z-index: -1; /* Put it behind text and buttons */
-}
-
-.form-container {
-  background: #222; /* Dark background for contrast */
-  color: white; /* Light text for readability */
-  padding: 2px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
-  max-width: 200px; /* Adjust as needed */
-  height: 700;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.typing-effect {
-  font-family: monospace;
-    font-size: 40px;
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 4px solid #fff; /* Cursor effect */
-    padding-right: 5px; /* Space between text and cursor */
-    width: 0; /* Initially hides the text */
-    animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
-}
-
-/* Typing animation */
-@keyframes typing {
-  0% {
-      width: 0;
-  }
-  100% {
-      width: 33%;
-  }
-}
-
-/* Blinking cursor effect */
-@keyframes blink {
-  0%, 50% {
-      border-color: transparent;
-  }
-  50.1%, 100% {
-      border-color: #fff;
-  }
-}
-
-/* Center the navbar */
-.navbar {
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically if needed */
-  width: 100%;
-}
-
-/* Dilemma Game Container (where the buttons live) */
+/* Dilemma Game Styles */
 .dilemma-container {
   display: flex;
-  flex-direction: row; /* Stack the buttons vertically */
-  justify-content: center; /* Center vertically inside the container */
-  align-items: center; /* Center horizontally inside the container */
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   text-align: center;
-}
-
-/* Button Styles */
-button {
-  padding: 15px 30px;
-  font-size: 1.2em;
-  margin: 10px; /* Space between buttons */
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  flex: 1; /* Make buttons take equal width */
-  min-width: 150px; /* Prevent buttons from becoming too small */
-  max-width: 200px; /* Limit max width for larger screens */
-  min-height: 70px;
 }

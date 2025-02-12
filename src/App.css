@@ -100,3 +100,13 @@ input[type="text"]:focus {
     width: 90%;
   }
 }
+
+/* Subtle navigation bar */
+nav {
+  position: absolute; /* Position it at the top */
+  bottom: 20px; /* Place it near the bottom */
+  width: 100%;
+  text-align: center;
+  opacity: 0.3; /* Subtle, low opacity */
+  font-size: 1em;
+}
