@@ -1,0 +1,7 @@
+
+.character-photo {
+  width: 150px;  /* Set your preferred width */
+  height: 150px; /* Set your preferred height */
+  object-fit: cover; /* Ensures the image fills the space without distortion */
+  border-radius: 8px; /* Optional: Adds rounded corners */
+}
