@@ -3,18 +3,22 @@ import { useOutletContext } from "react-router-dom";
 import User from "./User";
 
 function Results() {
-    const { userName, setUserName, scores } = useOutletContext()
+    const { scores } = useOutletContext()
     const [isNameSubmitted, setIsNameSubmitted] = useState(false)
     const [userScores, setUserScores] = useState([])
+    const [formData, setFormData] = useState({
+        userName: "",
+        image: ""
+    })
 
     const handleNameSubmit = (event) => {
         event.preventDefault()
-        if (userName) {
+        if (formData.userName) {
             setIsNameSubmitted(true)
             console.log("Name submitted")
         }
         else {
-            alert("Please enter your name!")
+            alert("We require your name to hold you accountable for the crimes you've committed.")
         }
     }
 
@@ -24,17 +28,51 @@ function Results() {
         .then(userData => setUserScores(userData)) //updates state, triggering re-render
     }, [])
 
+    function updateFormData(event){
+        setFormData({...formData, [event.target.name]: event.target.value}) //Dynamically update formData
+    }
+
+    function handleSubmitResults(){
+        const newUser = {
+            name: formData.userName,
+            image: formData.image,
+            scores
+        }
+
+        fetch("http://localhost:4000/userScores", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newUser),
+        })
+        .then(response => response.json())
+        .then(newUserData => {
+            setUserScores([...userScores, newUserData]); // Update the state with new user data
+        })
+    }
+
 //if user hasn't submitted their name, show the form
 if (!isNameSubmitted) {
     return (
         <div>
-            <form onSubmit={handleNameSubmit}>
+            <form onSubmit={handleSubmitResults}>
                 <input
+                onChange={updateFormData}
                 type="text"
-                value={userName}
-                onChange={(e) => setUserName(e.target.value)}
+                id="userName"
+                name="userName"
                 placeholder="Enter your name"
+                value={formData.userName}
                 />
+                <input 
+                onChange={updateFormData} 
+                type="text" 
+                id="new-image" 
+                name= "image" 
+                placeholder="Enter your profile picture"
+                value={formData.image}/>
+                <br></br>
                 <button type="submit">Submit</button>
             </form>
         </div>
@@ -52,7 +90,7 @@ if (!scores) {
 return(
     <div className="results">
         <h1>Your Results</h1>
-            <p>Name: {userName}</p>
+            <p>Name: {formData.userName}</p>
             <p>Utilitarian: {scores.utilitarian}</p>
             <p>Deontology: {scores.deontology}</p>
             <p>Virtue Ethics: {scores.virtueEthics}</p>
