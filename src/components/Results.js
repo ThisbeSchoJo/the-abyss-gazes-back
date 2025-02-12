@@ -16,6 +16,7 @@ function Results() {
         if (formData.userName) {
             setIsNameSubmitted(true)
             console.log("Name submitted")
+            handleSubmitResults()
         }
         else {
             alert("We require your name to hold you accountable for the crimes you've committed.")
@@ -48,7 +49,7 @@ function Results() {
         })
         .then(response => response.json())
         .then(newUserData => {
-            setUserScores([...userScores, newUserData]); // Update the state with new user data
+            setUserScores((prevUserScores) => [...prevUserScores, newUserData]); // Update the state with new user data
         })
     }
 
@@ -56,7 +57,7 @@ function Results() {
 if (!isNameSubmitted) {
     return (
         <div>
-            <form onSubmit={handleSubmitResults}>
+            <form onSubmit={handleNameSubmit}>
                 <input
                 onChange={updateFormData}
                 type="text"
@@ -80,12 +81,10 @@ if (!isNameSubmitted) {
 }
 
 //if user has submitted their name, show the results
+//I DON'T THINK THIS PART IS WORKING - NEED TO FIX
 if (!scores) {
     return <p>Please complete the moral dilemma questions to receive results</p>
 }
-
-
-
 
 return(
     <div className="results">

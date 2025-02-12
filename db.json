@@ -190,6 +190,19 @@
         "socialContractTheory": -5,
         "feministEthics": -10
       }
+    },
+    {
+      "id": "0598",
+      "name": "steve",
+      "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSExMVFRUXFxcYFxgYGBgdGBgYGBgYGhcaFx0aHSggHRslHRgWIjEhJSkrLi4uGCEzODMtNygtLisBCgoKDg0OGxAQGy8mICYtLS0tLTUtLi0rNS0tLS0vLTUvLS0tLS8tLS0tLS0vLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAEBQMGAAIHAQj/xABLEAACAQIEAwYCBgUJBwIHAAABAhEAAwQSITEFQVEGEyJhcYEykUJyobHB0RQjUuHwBxUWMzRigpKyNVNUk6LC8WOzCBckQ3N0g//EABoBAAMBAQEBAAAAAAAAAAAAAAIDBAUBAAb/xAA0EQACAgEDAQYEAwkBAQAAAAABAgADEQQSITETIjJBUfBhcYGxFFLBBSMzQpGh0eHxYhX/2gAMAwEAAhEDEQA/AJc1eBpqPGJDVFYOtfG2qScTFs4jApAoE3wDRF29pS4jWnV6glcTxIjW3igRUNy7rUSCKhd6B23LgzjAiEvcrRPKhc9G4JZpumds7ZytucSTNXgJFH9yKjfD0V1WW5huh6wNWk0Zm0oc2oNbqabQgTiJ5zIL4IM0Tg3rLq6UfwXhisQTesGfoNcZGHzXf5iq0TDcQlUk4EhupIpXctwa6JZ7Lr8S3NehgqeoJG4PWtR2KSSWbcQI3+IknXSYgfM17U6Ky3pKRprPSc7sAkwJJOwr1rRnSuiOMHhgUtoHeDIXxMeudjoB1FVq9eFxiwQJOwHL1PM+ddr03ZptJyZ569o5MiwdrSajxKQanS6F0rMSmYHypmO5iIPTiBVpevwIqdk8M8tqHFosQAJJMAdaRavdGJ1RA7Otxc2illBPQMd/TenXDMKRlZgU8DliQfD3N5CSfOBHyo+1wAKAb7BVVAHEj4hd7wKZ0+HQ9Jry/wBpcEGaWZpZi",
+      "scores": {
+        "utilitarian": 0,
+        "deontology": 0,
+        "virtueEthics": 0,
+        "careEthics": 0,
+        "socialContractTheory": 0,
+        "feministEthics": 0
+      }
     }
   ]
 }
