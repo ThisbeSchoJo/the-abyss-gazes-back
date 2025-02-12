@@ -45,12 +45,16 @@ function App() {
       const newScores = {
         //NEED TO UPDATE INTO LOOP INSTEAD OF HARD CODED
         //DELETE/ADD WHICHEVER ARE NEEDED AT THE END
-        utilitarian: prevScores.utilitarian + (categoryEffects.utilitarian || 0),
-        deontology: prevScores.deontology + (categoryEffects.deontology || 0),
-        virtueEthics: prevScores.virtueEthics + (categoryEffects.virtueEthics || 0),
-        careEthics: prevScores.careEthics + (categoryEffects.careEthics || 0),
-        socialContractTheory: prevScores.socialContractTheory + (categoryEffects.socialContractTheory || 0),
-        feministEthics: prevScores.feministEthics + (categoryEffects.feministEthics ||0)
+        idealist: prevScores.idealist + (categoryEffects.idealist || 0),
+        pragmatist: prevScores.pragmatist + (categoryEffects.pragmatist || 0),
+        guardian: prevScores.guardian + (categoryEffects.guardian || 0),
+        opportunist: prevScores.opportunist + (categoryEffects.opportunist || 0),
+        rebel: prevScores.rebel + (categoryEffects.rebel || 0),
+        cynic: prevScores.cynic + (categoryEffects.cynic ||0),
+        hedonist: prevScores.hedonist + (categoryEffects.hedonist ||0),
+        powerSeeker: prevScores.powerSeeker + (categoryEffects.powerSeeker ||0),
+        martyr: prevScores.martyr + (categoryEffects.martyr ||0),
+        trickster: prevScores.trickster + (categoryEffects.trickster ||0)
       }
       return newScores
     })
