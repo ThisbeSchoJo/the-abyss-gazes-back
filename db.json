@@ -402,7 +402,7 @@
     {
       "id": 9,
       "category": "Martyr",
-      "image": "url-to-martyr-image.jpg",
+      "image": "./images/katniss-everdeen.jpeg",
       "description": "A self-sacrificing one who is willing to give up everything for the greater good."
     },
     {
