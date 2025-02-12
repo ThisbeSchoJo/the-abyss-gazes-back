@@ -1,13 +1,14 @@
 import { Outlet } from "react-router-dom";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import '../App.css';
 import NavBar from "./NavBar";
+// import db from "../db.json";
 
 function App() {
   //State for dilemmas
   const [dilemmas, setDilemmas] = useState([])
+  // const dilemmas = db.questions;
   //State for tracking user morality scores
-  //NEED TO UPDATE AT END TO INCLUDE ALL RELEVANT CATEGORIES
   const [scores, setScores] = useState({
     idealist: 0,
     pragmatist: 0,
@@ -25,26 +26,19 @@ function App() {
 
   //State to store user's name
   const [userName, setUserName] = useState("")
-  
+
   useEffect(() => {
-    retrieveDilemmas()
-  }, [])
-
-  function retrieveDilemmas(){
-    fetch("http://localhost:4000/questions")
+    fetch("http://localhost:4000/dilemmas")
     .then(response => response.json())
-    .then(setDilemmas)
-  }
-
-  //function will update the scores state based on user's choice
-  //function will also move to the next dilemma
-  //function will log the final scores when last question is answered
+    .then(dilemmasData => {
+      setDilemmas(dilemmasData)
+    })
+  }, [])
+  
   function handleChoice(categoryEffects) {
     //updates the scores for each morality category after user chooses
     setScores((prevScores) => {
       const newScores = {
-        //NEED TO UPDATE INTO LOOP INSTEAD OF HARD CODED
-        //DELETE/ADD WHICHEVER ARE NEEDED AT THE END
         idealist: prevScores.idealist + (categoryEffects.idealist || 0),
         pragmatist: prevScores.pragmatist + (categoryEffects.pragmatist || 0),
         guardian: prevScores.guardian + (categoryEffects.guardian || 0),
@@ -63,15 +57,14 @@ function App() {
     setCurrentQuestionIndex((prevIndex) => prevIndex +1 )
   }
 
-    //Log the final scores if at end or move to next dilemma
   useEffect(() => {
-    if (!userName || currentQuestionIndex < dilemmas.length) return //Exit early if userName is not set or questions are not finished
-    if (currentQuestionIndex === (dilemmas.length - 1)) {
+    if (currentQuestionIndex < dilemmas.length) return;
+    if (currentQuestionIndex === dilemmas.length -1) {
       const resultData = {
         userName: userName,
         scores: scores
       }
-      
+
       fetch("http://localhost:4000/userScores", {
         method: "POST",
         headers: {
@@ -90,19 +83,20 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Outlet context={
-        {
-          dilemmas: dilemmas,
-          scores: scores,
-          currentQuestionIndex: currentQuestionIndex,
-          handleChoice : handleChoice,
-          setUserName: setUserName,
-          userName, userName,
-        }
-      }/>
-      
-    </div>
-  );
+      {dilemmas.length === 0 ? (
+          <div>Loading...</div>
+        ) : (
+          <Outlet context={{
+            dilemmas: dilemmas,
+            scores: scores,          
+            currentQuestionIndex: currentQuestionIndex,
+            handleChoice : handleChoice,
+            setUserName: setUserName,
+            userName: userName,
+          }}/>
+        )}
+      </div>
+    );
 }
 
 export default App;

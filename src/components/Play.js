@@ -1,16 +1,19 @@
 import { useOutletContext } from "react-router-dom";
 
 function Play(){
-    const { dilemmas, currentQuestionIndex, handleChoice } = useOutletContext()
+    const { dilemmas, handleChoice } = useOutletContext()
 
-    const currentDilemma = dilemmas[currentQuestionIndex]
+    const currentDilemma = dilemmas[0]
 
-    if (currentDilemma !== undefined) {
-        console.log(currentDilemma.question)
-    } 
-    else {
-        return null
-    }
+    // if (currentDilemma !== undefined) {
+    //     console.log(currentDilemma.question)
+    // } 
+    // else {
+    //     return null
+    // }
+    if (!currentDilemma) {
+        return <h1>Loading dilemma...</h1>;
+      }
 
     //Handle when a user selects a choice
     function handleChoiceSelection(choice) {
@@ -27,25 +30,48 @@ function Play(){
     }
 
     return (
-        <div key={currentDilemma.id}>
-            <img 
-            src={currentDilemma.background}
-            alt="Dilemma Background"
-            className="background-image"
-            />
-            <h1>{currentDilemma.question}</h1>
-            <div className="dilemma-container">
-                <button onClick={() => handleChoiceSelection(currentDilemma.choices[0])}>{currentDilemma.choices[0].text}</button>
-                <button onClick={() => handleChoiceSelection(currentDilemma.choices[1])}>{currentDilemma.choices[1].text}</button>
+        <div>
+              {/* <img 
+                src={currentDilemma.background} 
+                alt="Dilemma background" 
+                className="background-image"
+              /> */}
+            <div className="background" style={{ backgroundImage: `url(${currentDilemma.background})` }}>
+                <div className="content">
+                    <h2>{currentDilemma.question}</h2>
+                    {currentDilemma.choices.map((choice, index) => (
+                        <button key={index} onClick={() => handleChoiceSelection(choice)}>
+                            {choice.text}
+                        </button>
+                ))}
+              </div>
             </div>
-            {/* <h3>{currentDilemma.categoryEffects.utilitarian}</h3>
-            <h3>{currentDilemma.categoryEffects.deontology}</h3> 
-            <h3>{currentDilemma.categoryEffects.virtueEthics}</h3> 
-            <h3>{currentDilemma.categoryEffects.careEthics}</h3>  */}
-            
         </div>
-    )
+      );      
 }
 
 export default Play;
 
+
+
+
+// {currentDilemma ? (
+//     <>
+//       <img 
+//         src={currentDilemma.background} 
+//         alt="Dilemma background" 
+//         className="background-image"
+//       />
+//       {/* Text container that appears above the image */}
+//       <div className="question-container">
+//         <h2>{currentDilemma.question}</h2>
+//         {currentDilemma.choices.map((choice, index) => (
+//             <button key={index} onClick={() => handleChoiceSelection(choice)}>
+//                 {choice.text}
+//             </button>
+//         ))}
+//       </div>
+//     </>
+//   ) : (
+//     <div className="loading">Loading dilemmas...</div> // Show loading until data is available
+//   )}
