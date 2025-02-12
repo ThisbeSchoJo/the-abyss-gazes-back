@@ -360,13 +360,13 @@
     {
       "id": 2,
       "category": "Pragmatist",
-      "image": "url-to-pragmatist-image.jpg",
+      "image": "./images/shrek.jpg",
       "description": "A realist who makes decisions based on practical considerations."
     },
     {
       "id": 3,
       "category": "Guardian",
-      "image": "./images/brienne-of-tarth.jpeg",
+      "image": "./images/brienne-of-tarth.png",
       "description": "A protector who always looks out for others and their safety."
     },
     {
@@ -378,25 +378,25 @@
     {
       "id": 5,
       "category": "Rebel",
-      "image": "url-to-rebel-image.jpg",
-      "description": "A chaotic force who challenges authority and embraces unpredictability."
+      "image": "./images/wednesday.webp",
+      "description": "A chaotic force who challenges authority, social norms, and embraces unpredictability."
     },
     {
       "id": 6,
       "category": "Cynic",
-      "image": "./images/severus-snape.jpeg",
+      "image": "./images/severus-snape.png",
       "description": "A disillusioned character who sees the flaws in everything and everyone."
     },
     {
       "id": 7,
       "category": "Hedonist",
-      "image": "url-to-hedonist-image.jpg",
+      "image": "./images/gatsby.jpeg",
       "description": "A pleasure-seeker who lives for indulgence and enjoyment."
     },
     {
       "id": 8,
       "category": "Power-Seeker",
-      "image": "./images/regina-george.jpg",
+      "image": "./images/regina-george.png",
       "description": "A dominator who craves power and control over others."
     },
     {
@@ -408,7 +408,7 @@
     {
       "id": 10,
       "category": "Trickster",
-      "image": "url-to-trickster-image.jpg",
+      "image": "./images/loki.jpg",
       "description": "A manipulator who uses wit and cunning to get what they want."
     }
   ]
