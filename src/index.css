@@ -203,3 +203,13 @@ nav > a {
   height: 100%;
   text-align: center;
 }
+
+
+.userScoresContainer {
+  max-height: 400px; /* Adjust based on how much of the page you want visible */
+    overflow-y: auto;  /* Enables vertical scrolling when content overflows */
+    margin-top: 20px;
+    padding-right: 10px; /* Prevents the scroll bar from overlapping the content */
+    border: 1px solid #ccc; /* Optional: adds a border around the scrollable area */
+    border-radius: 8px; /* Optional: rounds the corners for a smoother look */
+}

@@ -90,6 +90,7 @@ return(
     <div className="results">
         <h1>Your Results</h1>
             <p>Name: {formData.userName}</p>
+            <p>{formData.image}</p>
             <p>Utilitarian: {scores.utilitarian}</p>
             <p>Deontology: {scores.deontology}</p>
             <p>Virtue Ethics: {scores.virtueEthics}</p>
@@ -97,11 +98,13 @@ return(
             <p>Social Contract Theory: {scores.socialContractTheory}</p>
             <p>Feminist Ethics: {scores.feministEthics}</p>
         <h2>All User Scores</h2>
-            <ul>
-                {userScores.map(user => (
-                    <User key={user.id} user={user} />
-                ))}
-            </ul>
+            <div className="userScoresContainer">
+                <ul>
+                    {userScores.map(user => (
+                        <User key={user.id} user={user} />
+                    ))}
+                </ul>
+            </div>
     </div>
     )
 }
