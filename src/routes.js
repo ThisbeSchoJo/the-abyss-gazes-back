@@ -4,7 +4,7 @@ import ErrorPage from "./components/ErrorPage";
 import Home from "./components/Home";
 import Play from "./components/Play";
 import CharacterList from "./components/CharacterList";
-import Results from "./components/UserProfiles";
+import UserProfiles from "./components/UserProfiles";
 
 
 const routes = [
@@ -26,8 +26,8 @@ const routes = [
                 element: <CharacterList />
             },
             {
-                path: "/results",
-                element: <Results />
+                path: "/user-profiles",
+                element: <UserProfiles />
             }
         ]
     }
