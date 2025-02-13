@@ -331,6 +331,74 @@
         "martyr": 0,
         "trickster": -1
       }
+    },
+    {
+      "id": "e1bc",
+      "userName": "pizza",
+      "image": "testing.jpg",
+      "scores": {
+        "idealist": 25,
+        "pragmatist": 28,
+        "guardian": 40,
+        "opportunist": -5,
+        "rebel": -16,
+        "cynic": 0,
+        "hedonist": -7,
+        "powerSeeker": 15,
+        "martyr": 15,
+        "trickster": -3
+      }
+    },
+    {
+      "id": "6d60",
+      "userName": "pizza",
+      "image": "testing.jpg",
+      "scores": {
+        "idealist": 25,
+        "pragmatist": 28,
+        "guardian": 40,
+        "opportunist": -5,
+        "rebel": -16,
+        "cynic": 0,
+        "hedonist": -7,
+        "powerSeeker": 15,
+        "martyr": 15,
+        "trickster": -3
+      }
+    },
+    {
+      "id": "a0e7",
+      "userName": "testing",
+      "image": "testing.jpg",
+      "scores": {
+        "idealist": 25,
+        "pragmatist": 28,
+        "guardian": 40,
+        "opportunist": -5,
+        "rebel": -16,
+        "cynic": 0,
+        "hedonist": -7,
+        "powerSeeker": 15,
+        "martyr": 15,
+        "trickster": -3
+      }
+    },
+    {
+      "id": "23e0",
+      "userName": "testing",
+      "image": "testing1234.jpg",
+      "scores": {
+        "idealist": 25,
+        "pragmatist": 28,
+        "guardian": 40,
+        "opportunist": -5,
+        "rebel": -16,
+        "cynic": 0,
+        "hedonist": -7,
+        "powerSeeker": 15,
+        "martyr": 15,
+        "trickster": -3
+      }
     }
   ],
   "characters": [

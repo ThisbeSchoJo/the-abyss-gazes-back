@@ -34,18 +34,3 @@ function Play(){
 
 export default Play;
 
-
-// return (
-//     <div>
-//         <div className="background" style={{ backgroundImage: `url(${currentDilemma.background})` }}>
-//             <div className="content">
-//                 <h2>{currentDilemma.question}</h2>
-//                 {currentDilemma.choices.map((choice, index) => (
-//                     <button key={index} onClick={() => handleChoiceSelection(choice)}>
-//                         {choice.text}
-//                     </button>
-//             ))}
-//           </div>
-//         </div>
-//     </div>
-//   ); 
