@@ -1,3 +1,5 @@
+
+/* For dilemma background image */
 .background {
   width: 100%;
   height: 100vh; /* Makes sure it fills the viewport */
@@ -14,7 +16,33 @@
   background-image: attr(data-bg url);
 }
 
+/* styling for dilemmas in Play */
+.dilemma-box {
+  background: rgba(0, 0, 0, 0.4); /* Dark transparent box */
+  color: white; /* Makes text readable */
+  padding: 20px;
+  border-radius: 10px; /* Smooth corners */
+  max-width: 600px; /* Prevents it from stretching too wide */
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
 
+/* Optional: Add some spacing to buttons */
+.dilemma-box button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 15px;
+  border: none;
+  background: #ff5733; /* Vibrant button color */
+  color: white;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dilemma-box button:hover {
+  background: #ff784e; /* Slightly lighter hover effect */
+}
 
 .character-card {
   display: flex; /* Makes image and text align horizontally */

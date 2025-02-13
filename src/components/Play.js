@@ -19,8 +19,8 @@ function Play(){
     return (
             <div key={currentDilemma.id}>
                 <div className="background" style={{ backgroundImage: `url(${currentDilemma.background})` }}>
-                    <div className="content">
-                        <h2>{currentDilemma.question}</h2>
+                    <div className="dilemma-box">
+                        <h4>{currentDilemma.question}</h4>
                         {currentDilemma.choices.map((choice, index) => (
                             <button key={index} onClick={() => handleChoiceSelection(choice)}>
                             {choice.text}
