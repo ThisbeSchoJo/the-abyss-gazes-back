@@ -44,6 +44,17 @@
   background: #ff784e; /* Slightly lighter hover effect */
 }
 
+/* Results user card styling */
+.user-image {
+  width: 150px; /* Adjust size */
+  height: 150px;
+  border-radius: 50%; /* Circular avatar */
+  object-fit: cover; /* Ensures the image fills the frame */
+  display: block;
+  margin: 10px auto;
+  border: 3px solid #333; /* Optional border */
+}
+
 .character-card {
   display: flex; /* Makes image and text align horizontally */
   flex-wrap: wrap;

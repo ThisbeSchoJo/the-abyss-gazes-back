@@ -90,7 +90,7 @@ return(
     <div className="results">
         <h1>Your Results</h1>
             <p>Name: {formData.userName}</p>
-            <p>{formData.image}</p>
+            <img src={formData.image} alt={`${formData.userName}'s avatar`} className="user-image"/>
             <p>Utilitarian: {scores.utilitarian}</p>
             <p>Deontology: {scores.deontology}</p>
             <p>Virtue Ethics: {scores.virtueEthics}</p>
