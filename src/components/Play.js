@@ -17,7 +17,7 @@ function Play(){
     }
 
     return (
-            <div>
+            <div key={currentDilemma.id}>
                 <div className="background" style={{ backgroundImage: `url(${currentDilemma.background})` }}>
                     <div className="content">
                         <h2>{currentDilemma.question}</h2>

@@ -1,7 +1,53 @@
+.background {
+  width: 100%;
+  height: 100vh; /* Makes sure it fills the viewport */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-.character-photo {
+/* Use an attribute selector to set the background image */
+.background[data-bg] {
+  background-image: attr(data-bg url);
+}
+
+
+
+.character-card {
+  display: flex; /* Makes image and text align horizontally */
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: center; /* Aligns items in the center */
+  border: 2px solid #ccc; /* Border for the card */
+  border-radius: 12px; /* Rounded corners */
+  padding: 16px;
+  margin: 10px;
+  background-color: #f9f9f9; /* Light background */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  max-width: 400px; /* Adjust width as needed */
+}
+
+.character-card img {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ccc;
   width: 150px;  /* Set your preferred width */
   height: 150px; /* Set your preferred height */
   object-fit: cover; /* Ensures the image fills the space without distortion */
   border-radius: 8px; /* Optional: Adds rounded corners */
+}
+
+.character-info h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.character-info p {
+  margin: 5px 0 0;
+  font-size: 0.9em;
+  color: #555;
 }

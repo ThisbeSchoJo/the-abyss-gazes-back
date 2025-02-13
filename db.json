@@ -3,7 +3,7 @@
     {
       "id": "1",
       "question": "Like you're on your subway commute home and see two rats fighting. Do you intervene and stop the fight or do you let the stronger of the two kill the other in front of a crowd of onlookers, including young children?",
-      "background": "/images/subway.jpg",
+      "background": "/images/rat-fight.jpg",
       "choices": [
         {
           "text": "Intervene - Stop the fight.",
@@ -114,7 +114,7 @@
     {
       "id": "4",
       "question": "Your husband keeps getting a stomach bug after he eats ham. He decides he will no longer eat ham to avoid this suffering. You discover it actually is unrelated to ham and actually from the homemade root beer you’ve been making. You HATE ham and you love making root beer. Do you tell him it isn’t the ham and keep making root beer or abandon your new favorite hobby so he can enjoy his favorite snack?",
-      "background": "/images/rootbeer.jpg",
+      "background": "/images/rootbeer-lies.jpg",
       "choices": [
         {
           "text": "Tell him - End the lie and continue making root beer.",
@@ -150,8 +150,8 @@
     },
     {
       "id": "5",
-      "question": "Your 10-year-old child commits a heinous crime—murdering another child in cold blood. The justice system won’t believe a child is capable of such a crime, and they are blaming an innocent man instead. If you confess what happened, your child will go to prison for life. If you stay silent, the innocent man will be executed. What do you do?",
-      "background": "/images/crime.jpg",
+      "question": "Your 6-year-old child commits a heinous crime—murdering another child in cold blood. The justice system won’t believe a child is capable of such a crime, and they are blaming an innocent man instead. If you confess what happened, your child will go to prison for life. If you stay silent, the innocent man will be executed. What do you do?",
+      "background": "/images/child-murderer.jpg",
       "choices": [
         {
           "text": "Confess - Sacrifice your child for the innocent man's life.",
@@ -225,7 +225,7 @@
     {
       "id": "7",
       "question": "You have captured a terrorist who has planted a bomb that will detonate in a crowded area, killing many innocent people. The terrorist will not divulge the location of the bomb, but you have a captive who knows the information. Do you use torture to extract the information and save lives, or do you refrain from torture and risk the lives of the innocent people?",
-      "background": "/images/bomb.jpg",
+      "background": "/images/terrorist.jpg",
       "choices": [
         {
           "text": "Torture the captive - Save lives.",
@@ -262,7 +262,7 @@
     {
       "id": "8",
       "question": "A scientist discovers the means to clone humans. The clones would be identical to the original person and would have the same memories and personality. The scientist must decide whether to continue with the research, knowing that it raises ethical and moral questions about the value of human life and individuality.",
-      "background": "/images/cloning.jpg",
+      "background": "/images/clones.jpg",
       "choices": [
         {
           "text": "Continue the research - Advance science, despite moral concerns.",
