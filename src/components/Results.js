@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useOutletContext } from "react-router-dom";
+// import { useOutletContext } from "react-router-dom";
 import User from "./User";
 
 function Results() {
@@ -13,16 +13,16 @@ function Results() {
   
     return (
       <div className="results">
-        <h1>All User Results</h1>
+        <h1>All User Profiles</h1>
         <div className="userScoresContainer">
           {userScores.length === 0 ? (
             <p>No results yet. Be the first to take the test!</p>
           ) : (
-            <ul>
+            <div>
               {userScores.map(user => (
                 <User key={user.id} user={user} />
               ))}
-            </ul>
+            </div>
           )}
         </div>
       </div>

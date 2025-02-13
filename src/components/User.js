@@ -1,6 +1,5 @@
 function User({ user }) {
     return (
-        <div className="cards-container">
             <div className="user-card">
                 <img src={user.image} alt={`${user.userName}'s avatar`} className="user-image"/>
                 <div className="user-info">
@@ -10,13 +9,13 @@ function User({ user }) {
                     <p>Guardian: {user.scores.guardian}</p>
                     <p>Opportunist: {user.scores.opportunist}</p>
                     <p>Rebel: {user.scores.rebel}</p>
-                    <p>Cynic: {user.scores.cynic}</p>                    <p>Hedonist: {user.scores.hedonist}</p>
-                    <p>powerSeeker: {user.scores.powerSeeker}</p>
+                    <p>Cynic: {user.scores.cynic}</p>                    
+                    <p>Hedonist: {user.scores.hedonist}</p>
+                    <p>Power Seeker: {user.scores.powerSeeker}</p>
                     <p>Martyr: {user.scores.martyr}</p>
                     <p>Trickster: {user.scores.trickster}</p>
                 </div>
             </div>
-        </div>
     )
 }
 

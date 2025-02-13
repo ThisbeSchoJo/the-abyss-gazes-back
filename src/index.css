@@ -1,8 +1,16 @@
+body {
+  background-color: black;
+  color: white; /* This ensures the text is readable on a black background */
+  font-family: Arial, sans-serif; /* You can choose a preferred font */
+}
+
+
 .home-page {
   background-color: black;
   color: white; /* Text will appear white for contrast */
   height: 100vh; /* Ensures it covers the full height of the viewport */
 }
+
 
 /* Style for the misty header */
 .misty-header {
@@ -111,39 +119,43 @@ nav > a {
 
 /* Results user card styling */
 .cards-container {
-  display: flex;
-  flex-wrap: wrap; /* Allows cards to wrap onto the next line */
-  justify-content: center; /* Centers the cards */
-  gap: 16px; /* Space between cards */
-  width: 100%; /* Ensures the container takes full width */
-  max-width: 1200px; /* Optional: Limits max width */
-  margin: 0 auto; /* Centers container */
+  display: flex; /* Align items in a row */
+  flex-wrap: wrap; /* Allow items to wrap onto a new line if necessary */
+  gap: 16px; /* Add space between the cards */
+  justify-content: center; /* Center the cards horizontally */
+  max-width: 1200px; /* Optional, limits the max width of the container */
+  width: 100%; /* Ensure the container takes up the full width */
 }
 
+/* User card styling */
 .user-card {
-  display: block;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid #ccc;
-  border-radius: 12px;
+  flex-basis: 30%;
+  max-width: 300px;
   padding: 16px;
-  margin: 10px;
-  background-color: #f9f9f9;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  max-width: 400px;
+  border-radius: 12px;
+  background-color: #333; /* Darker background for the card to contrast the page */
+  color: #ccc; /* White text for readability */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+/* For the scores, you might want to add some styling to control spacing */
+.user-info p {
+  font-size: 0.9em;
+  color: #ccc;
+  margin: 5px 0; /* Add some spacing between the score items */
+}
+
+/* Image inside the user card */
 .user-card img {
-  display: flex;
-  align-items: center;
-  border: 2px solid #ccc;
-  width: 200px;
-  height: 200px;
+  width: 100%; /* Makes the image fill the width of the card */
+  height: 200px; /* Adjust size as needed */
   object-fit: cover;
   border-radius: 8px;
+  margin-bottom: 10px; /* Add some space between the image and text */
 }
 
 .user-info h4 {
@@ -179,13 +191,17 @@ nav > a {
 }
 
 .character-card {
-  flex-basis: 30%; /* Sets the card's width to 30% of the container, so three cards fit per row */
-  max-width: 300px; /* Optional, limits the width of each card */
-  box-sizing: border-box; /* Ensures padding and borders are included in the width calculation */
+  flex-basis: 30%;
+  max-width: 300px;
   padding: 16px;
   border-radius: 12px;
-  background-color: #f9f9f9;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #333; /* Darker background for the card to contrast the page */
+  color: white; /* White text for readability */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .character-card img {
@@ -203,6 +219,6 @@ nav > a {
 .character-info p {
   margin: 5px 0 0;
   font-size: 0.9em;
-  color: #555;
+  color: #ccc;
 }
 
