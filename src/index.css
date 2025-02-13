@@ -213,12 +213,10 @@ nav > a {
 
 .character-info h3 {
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1.0em;
+  padding: 5px;
 }
-
-.character-info p {
-  margin: 5px 0 0;
-  font-size: 0.9em;
-  color: #ccc;
+.character-info h4 {
+  margin: 0;
+  font-size: 0.7em;
 }
-
