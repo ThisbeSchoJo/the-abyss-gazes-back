@@ -1,3 +1,50 @@
+.home-page {
+  background-color: black;
+  color: white; /* Text will appear white for contrast */
+  height: 100vh; /* Ensures it covers the full height of the viewport */
+}
+
+/* Style for the misty header */
+.misty-header {
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the text on the page */
+  z-index: 2;
+  animation: misty-fade 10s ease-in-out forwards;
+  color: rgba(255, 255, 255, 0);
+  max-width: 90%;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Keyframes for the misty fade animation */
+@keyframes misty-fade {
+  0%, 100% {
+    opacity: 0;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1), 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  20%, 80% {
+    opacity: 0.5;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  40%, 60% {
+    opacity: 1;
+    text-shadow: 0 0 0px rgba(255, 255, 255, 1);
+  }
+}
+
+
+
+
+
+
+
+
 
 /* For dilemma background image */
 .background {
@@ -45,67 +92,56 @@
 }
 
 /* Results user card styling */
-/* Style for the user card */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to wrap onto the next line */
+  justify-content: center; /* Centers the cards */
+  gap: 16px; /* Space between cards */
+  width: 100%; /* Ensures the container takes full width */
+  max-width: 1200px; /* Optional: Limits max width */
+  margin: 0 auto; /* Centers container */
+}
+
 .user-card {
+  display: block;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  max-width: 400px;
+}
+
+.user-card img {
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1); /* Slight transparent background */
-  border-radius: 12px;
-  padding: 15px;
-  margin: 10px 0;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease-in-out;
-  max-width: 500px;
-}
-
-/* Hover effect */
-.user-card:hover {
-  transform: scale(1.02);
-}
-
-/* Profile image */
-.user-image {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+  border: 2px solid #ccc;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
-  border: 3px solid #ffffff;
-  margin-right: 15px;
+  border-radius: 8px;
 }
 
-/* User info container */
-.user-info {
-  display: flex;
-  flex-direction: column;
-}
-
-/* User name */
-.user-name {
+.user-info h4 {
+  margin: 0;
   font-size: 1.2em;
-  font-weight: bold;
-  color: #ffffff;
-  margin-bottom: 5px;
 }
 
-/* Score list */
-.user-info p {
+.user-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0;
+}
+
+.user-info li {
   font-size: 0.9em;
-  color: #f1f1f1;
-  margin: 2px 0;
-}
-
-/* Responsive styling */
-@media (max-width: 600px) {
-  .user-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-  }
-
-  .user-image {
-    margin-bottom: 10px;
-  }
+  color: #555;
 }
 
 .character-card {
