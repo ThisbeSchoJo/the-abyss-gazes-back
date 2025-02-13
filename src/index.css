@@ -220,3 +220,38 @@ nav > a {
   margin: 0;
   font-size: 0.7em;
 }
+
+
+
+
+
+
+
+
+
+/* Highlight the highest scoring category */
+.highlighted-score {
+  color: #ff6347; /* A reddish color for the highest score */
+  font-weight: bold;
+  background-color: #2f2f2f; /* Dark background for contrast */
+  padding: 4px;
+  border-radius: 4px;
+}
+
+/* Color for high scores */
+.high-score {
+  color: #32cd32; /* Green for high score */
+  font-weight: bold;
+  background-color: #2f2f2f;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+/* Color for low scores */
+.low-score {
+  color: #ff6347; /* Red for low score */
+  font-weight: bold;
+  background-color: #2f2f2f;
+  padding: 4px;
+  border-radius: 4px;
+}

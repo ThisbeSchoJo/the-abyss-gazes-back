@@ -4,7 +4,7 @@ import ErrorPage from "./components/ErrorPage";
 import Home from "./components/Home";
 import Play from "./components/Play";
 import CharacterList from "./components/CharacterList";
-import Results from "./components/Results";
+import Results from "./components/UserProfiles";
 
 
 const routes = [

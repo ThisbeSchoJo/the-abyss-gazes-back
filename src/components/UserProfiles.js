@@ -13,7 +13,6 @@ function Results() {
   
     return (
       <div className="results">
-        <h1>All User Profiles</h1>
         <div className="userScoresContainer">
           {userScores.length === 0 ? (
             <p>No results yet. Be the first to take the test!</p>
