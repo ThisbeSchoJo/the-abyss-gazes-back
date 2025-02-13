@@ -12,11 +12,11 @@ function CharacterList(){
 
     return (
         <div className="character-list">
-            <ul>
+            <div className="cards-container">
                 {characters.map((character) => {
                     return <CharacterCard key={character.id} character={character}/>
                 })}
-            </ul>
+            </div>
         </div>
     )
 }

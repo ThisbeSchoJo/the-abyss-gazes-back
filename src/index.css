@@ -162,29 +162,37 @@ nav > a {
   color: #555;
 }
 
-.character-card {
-  display: flex; /* Makes image and text align horizontally */
-  flex-wrap: wrap;
-  gap: 16px;
+.character-list {
+  display: flex;
   justify-content: center;
-  align-items: center; /* Aligns items in the center */
-  border: 2px solid #ccc; /* Border for the card */
-  border-radius: 12px; /* Rounded corners */
+  padding: 20px; /* Optional, adds some space around the container */
+}
+
+/* Styling for the container holding the cards */
+.cards-container {
+  display: flex; /* Align items in a row */
+  flex-wrap: wrap; /* Allow items to wrap onto a new line if necessary */
+  gap: 16px; /* Add space between the cards */
+  justify-content: center; /* Center the cards horizontally */
+  max-width: 1200px; /* Optional, limits the max width of the container */
+  width: 100%; /* Ensure the container takes up the full width */
+}
+
+.character-card {
+  flex-basis: 30%; /* Sets the card's width to 30% of the container, so three cards fit per row */
+  max-width: 300px; /* Optional, limits the width of each card */
+  box-sizing: border-box; /* Ensures padding and borders are included in the width calculation */
   padding: 16px;
-  margin: 10px;
-  background-color: #f9f9f9; /* Light background */
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-  max-width: 400px; /* Adjust width as needed */
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .character-card img {
-  display: flex;
-  align-items: center;
-  border: 2px solid #ccc;
-  width: 150px;  /* Set your preferred width */
-  height: 150px; /* Set your preferred height */
-  object-fit: cover; /* Ensures the image fills the space without distortion */
-  border-radius: 8px; /* Optional: Adds rounded corners */
+  width: 100%;
+  height: 200px; /* Adjust size as needed */
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .character-info h3 {
@@ -197,3 +205,4 @@ nav > a {
   font-size: 0.9em;
   color: #555;
 }
+
