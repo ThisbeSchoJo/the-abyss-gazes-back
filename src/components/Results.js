@@ -89,24 +89,26 @@ if (!scores) {
 return(
     <div className="results">
         <h1>Your Results</h1>
-            <p>Name: {formData.userName}</p>
-            <img src={formData.image} alt={`${formData.userName}'s avatar`} className="user-image"/>
-            <p>Utilitarian: {scores.utilitarian}</p>
-            <p>Deontology: {scores.deontology}</p>
-            <p>Virtue Ethics: {scores.virtueEthics}</p>
-            <p>Care Ethics: {scores.careEthics}</p>
-            <p>Social Contract Theory: {scores.socialContractTheory}</p>
-            <p>Feminist Ethics: {scores.feministEthics}</p>
+        {/* Render the current user */}
+        <User user={{
+            userName: formData.userName,
+            image: formData.image,
+            scores: scores
+        }}
+        />
+        
         <h2>All User Scores</h2>
-            <div className="userScoresContainer">
-                <ul>
-                    {userScores.map(user => (
-                        <User key={user.id} user={user} />
-                    ))}
-                </ul>
-            </div>
+        <div className="userScoresContainer">
+            <ul>
+                {userScores.map(user => (
+                    <User key={user.id} user={user} />
+                ))}
+            </ul>
+        </div>
     </div>
     )
 }
 
 export default Results;
+
+

@@ -300,7 +300,7 @@
   "userScores": [
     {
       "id": "ea04",
-      "image": "",
+      "image": "https://i.pinimg.com/736x/2a/1a/85/2a1a85571d6182d9b301ba58b740b4ac.jpg",
       "userName": "hannah",
       "scores": {
         "idealist": 10,
@@ -317,8 +317,8 @@
     },
     {
       "id": "ts24",
-      "image": "",
       "userName": "thisbe",
+      "image": "https://th.bing.com/th/id/OIP.4w7xOVncoVlPWNwVGH2FNAHaFM?w=186&h=130&c=7&r=0&o=5&dpr=2&pid=1.7",
       "scores": {
         "idealist": 10,
         "pragmatist": -5,
@@ -330,74 +330,6 @@
         "powerSeeker": -3,
         "martyr": 0,
         "trickster": -1
-      }
-    },
-    {
-      "id": "a0fc",
-      "name": "thisbe",
-      "image": "/images/dog.jpeg",
-      "scores": {
-        "idealist": 0,
-        "pragmatist": 0,
-        "guardian": 0,
-        "opportunist": 0,
-        "rebel": 0,
-        "cynic": 0,
-        "hedonist": 0,
-        "powerSeeker": 0,
-        "martyr": 0,
-        "trickster": 0
-      }
-    },
-    {
-      "id": "fb90",
-      "name": "thisbe",
-      "image": "https://i.pinimg.com/originals/2c/4e/60/2c4e60e4a83fcef1068dd461a8267e9c.jpg",
-      "scores": {
-        "idealist": 0,
-        "pragmatist": 0,
-        "guardian": 0,
-        "opportunist": 0,
-        "rebel": 0,
-        "cynic": 0,
-        "hedonist": 0,
-        "powerSeeker": 0,
-        "martyr": 0,
-        "trickster": 0
-      }
-    },
-    {
-      "id": "7e26",
-      "name": "thisbe",
-      "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMWFhUXGRoaGBcYGR0bIBseGyAdHh8bHhsYHSggHxslHhgYITEhJyorLi4uGiAzODMtNygtLisBCgoKDg0OGxAQGy8lICUtLy0tLS8tLy0tLS0tLS0tLy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAPoAygMBIgACEQEDEQH/xAAcAAACAwEBAQEAAAAAAAAAAAAEBQIDBgcBAAj/xABAEAABAgUCBAQDBgUDBAEFAAABAhEAAwQhMRJBBSJRYQYTcYEykaEHscHR4fAUI0JSYjNyghWS0vEkCBdDosL/xAAaAQADAQEBAQAAAAAAAAAAAAABAgMABAUG/8QAKxEAAgICAQQBAgUFAAAAAAAAAAECEQMhMQQSQVEiE2EyQnGRwRSBoeHw/9oADAMBAAIRAxEAPwBzxScoqUJZKkKUolhYAfq31h5wrhc5CAtJBCx/VDHwwuX5AlhIJY5/feKpVZcAXCD7BrWifavxMSqE9X4Onz5xKilKUsWc/RhmNJxLg6P4dkywFgZDPtvFsmpXrCpgCAQ41MLD8biKuO8fMuW6ZalKOGSSPnDRSVtGpIwvDeEJm1OqfMKiOUJJJv8A2w88cpm0tHqQv4yEKcOwU+OkLPC/F1KqFzkyDNWPjYgBD7h+1vnFfjPxUiplLklJSpK7DIcNckZs4brCJunKwpeBIOCSJtKmcpZC9J1zFbnoAbAdPSEvhqlQoj+plgMN79Th/wAY6D4TQgyDJI1aiWcWAjnxrRSVE2XdtZBUQxsTft1jT3FNBSSlTP0MskJSDnDjAjjX2q0KU1aVJX5i1oJUnOljb5uflHXuCVwnSETOoD+vbtuOxjnX2jSZKahDcq1Bes7/ANLOfu94fI/gzRXyRyKrmrS2oHs8V0tSdQULEEEHcEbgiGHH5RBSklwMGEiBpXYxGMlQ7faz9AeCf",
-      "scores": {
-        "idealist": 0,
-        "pragmatist": 0,
-        "guardian": 0,
-        "opportunist": 0,
-        "rebel": 0,
-        "cynic": 0,
-        "hedonist": 0,
-        "powerSeeker": 0,
-        "martyr": 0,
-        "trickster": 0
-      }
-    },
-    {
-      "id": "4e3a",
-      "name": "thisbe",
-      "image": "https://i.pinimg.com/originals/2c/4e/60/2c4e60e4a83fcef1068dd461a8267e9c.jpg",
-      "scores": {
-        "idealist": 0,
-        "pragmatist": 0,
-        "guardian": 0,
-        "opportunist": 0,
-        "rebel": 0,
-        "cynic": 0,
-        "hedonist": 0,
-        "powerSeeker": 0,
-        "martyr": 0,
-        "trickster": 0
       }
     }
   ],

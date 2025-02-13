@@ -45,14 +45,67 @@
 }
 
 /* Results user card styling */
+/* Style for the user card */
+.user-card {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1); /* Slight transparent background */
+  border-radius: 12px;
+  padding: 15px;
+  margin: 10px 0;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+  max-width: 500px;
+}
+
+/* Hover effect */
+.user-card:hover {
+  transform: scale(1.02);
+}
+
+/* Profile image */
 .user-image {
-  width: 150px; /* Adjust size */
-  height: 150px;
-  border-radius: 50%; /* Circular avatar */
-  object-fit: cover; /* Ensures the image fills the frame */
-  display: block;
-  margin: 10px auto;
-  border: 3px solid #333; /* Optional border */
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffffff;
+  margin-right: 15px;
+}
+
+/* User info container */
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+/* User name */
+.user-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+/* Score list */
+.user-info p {
+  font-size: 0.9em;
+  color: #f1f1f1;
+  margin: 2px 0;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+  .user-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .user-image {
+    margin-bottom: 10px;
+  }
 }
 
 .character-card {
