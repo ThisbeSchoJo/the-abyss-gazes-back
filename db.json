@@ -2,7 +2,7 @@
   "dilemmas": [
     {
       "id": "1",
-      "question": "Like you're on your subway commute home and see two rats fighting. Do you intervene and stop the fight or do you let the stronger of the two kill the other in front of a crowd of onlookers, including young children?",
+      "question": "Imagine you're on your subway ride home, and you witness two rats engaged in a fierce fight. Do you step in and try to break up the conflict, or do you let the stronger rat prevail, allowing the brutal scene to unfold in front of a crowd, including innocent children?",
       "background": "/images/rat-fight.jpg",
       "choices": [
         {
@@ -39,7 +39,7 @@
     },
     {
       "id": "2",
-      "question": "You enjoy making pottery in your free time. One strange, loose night you are tempted to eat some… Tastes great and nothing bad seems to happen. You continue eating a little bit of clay as a treat each time you take to the wheel. A year later, you find out you have a mineral deficiency (pika) making you crave your secret treat. Do you seek treatment or keep eating?",
+      "question": "You enjoy making pottery in your free time. One strange, loose night you are tempted to eat some… Tastes great and nothing bad seems to happen. You continue eating a little bit of clay as a treat each time you take to the wheel. A year later, you find out you have a mineral deficiency (pica) making you crave your secret treat. Do you seek treatment or keep eating?",
       "background": "/images/pottery.jpg",
       "choices": [
         {
@@ -300,8 +300,8 @@
   "userScores": [
     {
       "id": "ea04",
-      "image": "https://i.pinimg.com/736x/2a/1a/85/2a1a85571d6182d9b301ba58b740b4ac.jpg",
-      "userName": "hannah",
+      "image": "https://th.bing.com/th/id/OIP.oWiSxfcz3rD4XrUXM6fjnwHaHQ?w=186&h=182&c=7&r=0&o=5&dpr=2&pid=1.7",
+      "userName": "Luna",
       "scores": {
         "idealist": 10,
         "pragmatist": -5,
@@ -316,20 +316,54 @@
       }
     },
     {
-      "id": "ts24",
-      "userName": "thisbe",
-      "image": "https://th.bing.com/th/id/OIP.4w7xOVncoVlPWNwVGH2FNAHaFM?w=186&h=130&c=7&r=0&o=5&dpr=2&pid=1.7",
+      "id": "9f72",
+      "userName": "Thisbe",
+      "image": "/images/thisbe.png",
       "scores": {
-        "idealist": 0,
-        "pragmatist": -5,
-        "guardian": -5,
-        "opportunist": 0,
-        "rebel": 5,
-        "cynic": 0,
-        "hedonist": -5,
-        "powerSeeker": -3,
-        "martyr": 0,
-        "trickster": -1
+        "idealist": 25,
+        "pragmatist": -17,
+        "guardian": 30,
+        "opportunist": 5,
+        "rebel": 8,
+        "cynic": -2,
+        "hedonist": 3,
+        "powerSeeker": 2,
+        "martyr": 30,
+        "trickster": 8
+      }
+    },
+    {
+      "id": "6c49",
+      "userName": "Ricardo",
+      "image": "https://avatars.githubusercontent.com/u/26052724?v=4",
+      "scores": {
+        "idealist": -5,
+        "pragmatist": 10,
+        "guardian": 8,
+        "opportunist": 25,
+        "rebel": -9,
+        "cynic": 13,
+        "hedonist": 25,
+        "powerSeeker": -5,
+        "martyr": 15,
+        "trickster": -8
+      }
+    },
+    {
+      "id": "fb63",
+      "userName": "Eli Groves",
+      "image": "https://media.licdn.com/dms/image/v2/C4D03AQGGe4mKi35BKg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1574439696988?e=1744848000&v=beta&t=NWkALg2PDOWEXM73c7Gyqumxzy16A_9MxI4Ok_f84PE",
+      "scores": {
+        "idealist": 15,
+        "pragmatist": 8,
+        "guardian": 25,
+        "opportunist": 10,
+        "rebel": -2,
+        "cynic": 1,
+        "hedonist": 3,
+        "powerSeeker": 10,
+        "martyr": 30,
+        "trickster": -2
       }
     }
   ],

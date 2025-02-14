@@ -9,10 +9,6 @@ function Play(){
     function handleChoiceSelection(choice) {
         //Get the category effects based on the selected choice
         const categoryEffects = choice.categoryEffects
-        console.log(`Selected choice:${choice.text}`)
-        console.log(`Idealist:${categoryEffects.idealist}`)
-        console.log(`Pragmatist:${categoryEffects.pragmatist}`)
-        console.log(`Opportunist:${categoryEffects.opportunist}`)
         handleChoice(categoryEffects) //call the callback to handle the answer
     }
 

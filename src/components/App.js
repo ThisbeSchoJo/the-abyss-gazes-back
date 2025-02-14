@@ -1,13 +1,11 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import '../App.css';
 import NavBar from "./NavBar";
-// import db from "../db.json";
 
 function App() {
-  //State for dilemmas
   const [dilemmas, setDilemmas] = useState([])
-  //State for tracking user morality scores
+  const [userScores, setUserScores] = useState([]);
   const [scores, setScores] = useState({
     idealist: 0,
     pragmatist: 0,
@@ -26,6 +24,7 @@ function App() {
   const [userName, setUserName] = useState("")
   const [userImage, setUserImage] = useState("");
   const [showForm, setShowForm] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("http://localhost:4000/dilemmas")
@@ -34,6 +33,12 @@ function App() {
       setDilemmas(dilemmasData)
     })
   }, [])
+
+  useEffect(() => {
+    fetch("http://localhost:4000/userScores")
+      .then(response => response.json())
+      .then(setUserScores);
+  }, []);
   
   function handleChoice(categoryEffects) {
     //updates the scores for each morality category after user chooses
@@ -70,9 +75,12 @@ function App() {
       body: JSON.stringify(resultData),
     })
       .then(response => response.json())
-      .then(data => console.log(`User scores saved:`, data));
+      .then(data => {
+        setUserScores(userScores => [...userScores, data])
+        navigate("./user-profiles")
+      })
 
-    window.location.href = "/results"; 
+    setShowForm(false)
   }
 
   return (
@@ -100,76 +108,10 @@ function App() {
           </form>
         </div>
       ) : (
-        <Outlet context={{ dilemmas, scores, currentQuestionIndex, handleChoice }} />
+        <Outlet context={{ dilemmas, scores, currentQuestionIndex, handleChoice, userScores }} />
       )}
     </div>
   );
 }
 
 export default App;
-
-
-//OLD CODE WAITING TO DELETE
-// function handleChoice(categoryEffects) {
-//   //updates the scores for each morality category after user chooses
-//   setScores((prevScores) => {
-//     const newScores = {
-//       idealist: prevScores.idealist + (categoryEffects.idealist || 0),
-//       pragmatist: prevScores.pragmatist + (categoryEffects.pragmatist || 0),
-//       guardian: prevScores.guardian + (categoryEffects.guardian || 0),
-//       opportunist: prevScores.opportunist + (categoryEffects.opportunist || 0),
-//       rebel: prevScores.rebel + (categoryEffects.rebel || 0),
-//       cynic: prevScores.cynic + (categoryEffects.cynic ||0),
-//       hedonist: prevScores.hedonist + (categoryEffects.hedonist ||0),
-//       powerSeeker: prevScores.powerSeeker + (categoryEffects.powerSeeker ||0),
-//       martyr: prevScores.martyr + (categoryEffects.martyr ||0),
-//       trickster: prevScores.trickster + (categoryEffects.trickster ||0)
-//     }
-//     return newScores
-//   })
-
-//   //move to the next question -callback function to update state
-//   setCurrentQuestionIndex((prevIndex) => prevIndex +1 )
-// }
-
-// useEffect(() => {
-//   if (currentQuestionIndex < dilemmas.length) return;
-//   if (currentQuestionIndex === dilemmas.length -1) {
-//     const resultData = {
-//       userName: userName,
-//       scores: scores
-//     }
-
-//     fetch("http://localhost:4000/userScores", {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json"
-//       },
-//       body: JSON.stringify(resultData)
-//     })
-//     .then(response => response.json())
-//     .then(data => {
-//       console.log(`User scores saved:${data}`)
-//     })
-//     console.log(`Game Over - Final Scores:${scores}`)
-//   }
-// }, [scores, currentQuestionIndex, dilemmas.length, userName])
-
-// return (
-//   <div>
-//     <NavBar />
-//     {dilemmas.length === 0 ? (
-//         <div>Loading...</div>
-//       ) : (
-//         <Outlet context={{
-//           dilemmas: dilemmas,
-//           scores: scores,          
-//           currentQuestionIndex: currentQuestionIndex,
-//           handleChoice : handleChoice,
-//           setUserName: setUserName,
-//           userName: userName,
-//         }}/>
-//       )}
-//     </div>
-//   );
-// }

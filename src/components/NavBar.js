@@ -1,10 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
     // Ref to the audio element
     const audioRef = useRef(null);
-    // Handle button click to play/pause music
+    // Handle button click to play music
     const handleMusicToggle = () => {
         audioRef.current.play();
     };
@@ -27,23 +27,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
-
-
-
-
-// import { NavLink } from "react-router-dom";
-
-// function NavBar(){
-//     return(
-//         <nav className="navbar">
-//             <NavLink to="/">Home</NavLink>
-//             <NavLink to="/play">Play Game</NavLink>
-//             <NavLink to="/user-profiles">User Profiles</NavLink>
-//             <NavLink to="/character-list">Moral Characters</NavLink>
-//             <button>Play Music</button>
-//         </nav>
-//     )
-// }
-
-// export default NavBar;
