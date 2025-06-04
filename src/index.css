@@ -1,12 +1,17 @@
 body {
   background-color: black;
- /* This ensures the text is readable on a black background */
+  /* This ensures the text is readable on a black background */
   font-family: Arial, sans-serif; /* You can choose a preferred font */
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .home-page {
   background-color: black;
- /* Text will appear white for contrast */
+  /* Text will appear white for contrast */
   height: 100vh; /* Ensures it covers the full height of the viewport */
 }
 
@@ -30,15 +35,20 @@ body {
 
 /* Keyframes for the misty fade animation */
 @keyframes misty-fade {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1), 0 0 10px rgba(255, 255, 255, 0.2);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1),
+      0 0 10px rgba(255, 255, 255, 0.2);
   }
-  20%, 80% {
+  20%,
+  80% {
     opacity: 0.5;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
+      0 0 20px rgba(255, 255, 255, 0.5);
   }
-  40%, 60% {
+  40%,
+  60% {
     opacity: 1;
     text-shadow: 0 0 0px rgba(255, 255, 255, 1);
   }
@@ -47,12 +57,15 @@ body {
 nav {
   position: fixed;
   bottom: 20px;
+  left: 0;
+  right: 0;
   width: 100%;
   text-align: center;
   opacity: 0.3;
   font-size: 1em;
   display: flex;
   justify-content: center;
+  z-index: 1000;
 }
 
 nav > a {
@@ -64,18 +77,24 @@ nav > a {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin: 0 10px;
 }
 
 /* For dilemma background image */
 .background {
-  width: 100%;
-  height: 100vh; 
+  width: 100vw;
+  height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 /* Use an attribute selector to set the background image */
@@ -112,13 +131,15 @@ nav > a {
 }
 
 /* Results user card styling */
-.cards-container {
-  display: flex; /* Align items in a row */
-  flex-wrap: wrap; /* Allow items to wrap onto a new line if necessary */
-  gap: 16px; /* Add space between the cards */
-  justify-content: center; /* Center the cards horizontally */
-  max-width: 1200px; /* Optional, limits the max width of the container */
-  width: 100%; /* Ensure the container takes up the full width */
+.userScoresContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
 }
 
 /* User card styling */
@@ -127,53 +148,52 @@ nav > a {
   max-width: 300px;
   padding: 16px;
   border-radius: 12px;
-  background-color: #333; /* Darker background for the card to contrast the page */
-  color: #ccc; /* White text for readability */
+  background-color: #333;
+  color: white;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden; /* Ensure content doesn't overflow */
 }
 
-/* For the scores, you might want to add some styling to control spacing */
-.user-info p {
-  font-size: 0.9em;
-  color: #ccc;
-  margin: 5px 0; /* Add some spacing between the score items */
-}
-
-/* Image inside the user card */
-.user-card img {
-  width: 100%; /* Makes the image fill the width of the card */
-  height: 200px; /* Adjust size as needed */
+.user-image {
+  width: 100%;
+  aspect-ratio: 1; /* Makes the image square */
   object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 10px; /* Add some space between the image and text */
+  margin-bottom: 10px;
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.user-image:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.user-info {
+  text-align: center;
+  width: 100%;
 }
 
 .user-info h4 {
   margin: 0;
   font-size: 1.2em;
+  padding: 5px;
 }
 
-.user-info ul {
-  list-style: none;
-  padding: 0;
-  margin: 5px 0 0;
-}
-
-.user-info li {
+.user-info p {
+  margin: 5px 0;
   font-size: 0.9em;
-  color: #555;
+  color: #ccc;
 }
 
-/* Highlight the highest scoring category */
 .highlighted-score {
   font-weight: bold;
-  background-color: #2f2f2f; /* Dark background for contrast */
+  background-color: #2f2f2f;
   padding: 4px;
   border-radius: 4px;
+  color: #4caf50 !important;
 }
 
 .character-list {
@@ -197,13 +217,19 @@ nav > a {
   max-width: 300px;
   padding: 16px;
   border-radius: 12px;
-  background-color: #333; /* Darker background for the card to contrast the page */
-  color: white; /* White text for readability */
+  background-color: #333;
+  color: white;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.character-card:hover {
+  transform: translateY(-5px);
 }
 
 .character-card img {
@@ -215,7 +241,7 @@ nav > a {
 
 .character-info h3 {
   margin: 0;
-  font-size: 1.0em;
+  font-size: 1em;
   padding: 5px;
 }
 .character-info h4 {
@@ -231,5 +257,148 @@ nav > a {
   top: 50%;
   left: 50%;
   /* transform: translate(-50%, -50%); */
-  z-index: 1000; /* Ensures it’s above other elements */
+  z-index: 1000; /* Ensures it's above other elements */
+}
+
+/* User input form styling */
+.user-form {
+  background: rgba(51, 51, 51, 0.9);
+  padding: 24px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.user-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0 20px 0;
+  border: 2px solid #444;
+  border-radius: 6px;
+  background-color: #222;
+  color: white;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+.user-form input:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.user-form label {
+  display: block;
+  color: #ccc;
+  margin-top: 16px;
+  margin-bottom: 4px;
+  font-size: 0.9em;
+}
+
+.user-form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user-form button:hover {
+  background-color: #45a049;
+}
+
+.user-form button:active {
+  transform: scale(0.98);
+}
+
+/* Modal styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #333;
+  padding: 24px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.point-distribution {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.point-item {
+  background-color: #444;
+  padding: 12px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.point-item span:first-child {
+  color: #ccc;
+}
+
+.point-item span:last-child {
+  font-weight: bold;
+  color: #4caf50;
+}
+
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 1.5em;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+}
+
+.close-button:hover {
+  color: white;
 }

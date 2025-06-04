@@ -187,7 +187,7 @@
     },
     {
       "id": "6",
-      "question": "You and a group of people are stranded in a lifeboat in the middle of the ocean. There is only enough food and water for half of the people to survive until rescue arrives. Do you sacrifice the weaker members of the group to ensure the survival of the stronger ones, or do you try to distribute the resources evenly and risk everyone dying?",
+      "question": "You and a group of people are stranded in a lifeboat in the middle of the ocean. Assuming rescue could take a week or two, there is only enough water for a handful of people to survive until rescue arrives. Do you sacrifice the weaker members of the group to ensure the survival of the stronger ones, or do you try to distribute the resources evenly and risk everyone dying?",
       "background": "/images/lifeboat.jpg",
       "choices": [
         {
@@ -224,11 +224,11 @@
     },
     {
       "id": "7",
-      "question": "You have captured a terrorist who has planted a bomb that will detonate in a crowded area, killing many innocent people. The terrorist will not divulge the location of the bomb, but you have a captive who knows the information. Do you use torture to extract the information and save lives, or do you refrain from torture and risk the lives of the innocent people?",
+      "question": "You have captured a terrorist who has planted a bomb that will detonate in a crowded area, killing many innocent people. The terrorist refuses to talk. Do you use torture to extract the information and save lives, or do you refrain from torture and risk the lives of the innocent people?",
       "background": "/images/terrorist.jpg",
       "choices": [
         {
-          "text": "Torture the captive - Save lives.",
+          "text": "Torture the terrorist - Save lives.",
           "categoryEffects": {
             "idealist": -5,
             "pragmatist": 10,
@@ -350,20 +350,20 @@
       }
     },
     {
-      "id": "fb63",
-      "userName": "Eli Groves",
-      "image": "https://media.licdn.com/dms/image/v2/C4D03AQGGe4mKi35BKg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1574439696988?e=1744848000&v=beta&t=NWkALg2PDOWEXM73c7Gyqumxzy16A_9MxI4Ok_f84PE",
+      "id": "3736",
+      "userName": "Joel",
+      "image": "https://cdn2.chicmagazine.com.mx/uploads/media/2025/04/15/the-last-of-us-temporada.jpg",
       "scores": {
-        "idealist": 15,
-        "pragmatist": 8,
-        "guardian": 25,
-        "opportunist": 10,
-        "rebel": -2,
-        "cynic": 1,
-        "hedonist": 3,
-        "powerSeeker": 10,
-        "martyr": 30,
-        "trickster": -2
+        "idealist": 5,
+        "pragmatist": 18,
+        "guardian": 20,
+        "opportunist": 15,
+        "rebel": -16,
+        "cynic": 15,
+        "hedonist": 5,
+        "powerSeeker": 5,
+        "martyr": 0,
+        "trickster": -5
       }
     }
   ],
